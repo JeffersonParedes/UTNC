@@ -1,0 +1,98 @@
+body {
+    padding-top: 56px; 
+}
+
+.hero-section {
+    background: url('../image/Generated\ Image\ September\ 05\,\ 2025\ -\ 1_04AM.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 51, 102, 0.7);
+    z-index: 1;
+}
+.hero-section .container > * {
+    z-index: 3;
+    position: relative;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para las imágenes de facultades en carreras.html */
+.row .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card {
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Estilos para el carrusel de carreras */
+#carouselCarreras .carousel-indicators {
+    bottom: -40px;
+}
+
+#carouselCarreras .carousel-indicators button {
+    background-color: #003366;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+#carouselCarreras .carousel-control-prev,
+#carouselCarreras .carousel-control-next {
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilos responsive para el carrusel */
+@media (max-width: 768px) {
+    #carouselCarreras .carousel-item .row {
+        margin: 0;
+    }
+    
+    #carouselCarreras .carousel-item .col-lg-5 {
+        padding: 0 5px;
+    }
+}

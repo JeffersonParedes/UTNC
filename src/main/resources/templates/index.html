@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Tecnologica de Nuevo Chimbote - UTNC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container position-relative">
+            <h1 class="display-3 position-relative">Formando a los Líderes del Futuro</h1>
+            <p class="lead position-relative">Excelencia académica y compromiso con el desarrollo de la región.</p>
+            <a href="admision.html" class="btn btn-primary btn-lg mt-3 position-relative">Postula Ahora</a>
+        </div>
+    </header>
+
+    <!-- Carreras Section -->
+    <section id="carreras" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Nuestras Carreras</h2>
+                <p class="lead">Elige tu camino profesional en una de nuestras facultades.</p>
+            </div>
+            
+            <!-- Carrusel de Carreras -->
+            <div id="carouselCarreras" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores del carrusel -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCarreras" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCarreras" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCarreras" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                
+                <!-- Contenido del carrusel -->
+                <div class="carousel-inner">
+                    <!-- Primer slide: Ingenierías y Ciencias de la Salud -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <!-- Ingeniería -->
+                            <div class="col-lg-5 col-md-6 mb-4 mx-2">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="image/ingenieria_moderna.svg" class="card-img-top" alt="Ingenierías">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ingenierías</h5>
+                                        <p class="card-text">Desarrolla soluciones innovadoras a los desafíos del mañana en campos como software, civil e industrial.</p>
+                                        <a href="carreras.html#ingenieria" class="btn btn-outline-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ciencias de la Salud -->
+                            <div class="col-lg-5 col-md-6 mb-4 mx-2">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Ciencias de la Salud">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ciencias de la Salud</h5>
+                                        <p class="card-text">Prepárate para cuidar el bienestar de la comunidad con nuestras carreras en enfermería y tecnología médica.</p>
+                                        <a href="carreras.html#salud" class="btn btn-outline-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Segundo slide: Ciencias Sociales y Derecho -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <!-- Ciencias Sociales -->
+                            <div class="col-lg-5 col-md-6 mb-4 mx-2">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Ciencias Sociales">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ciencias Sociales</h5>
+                                        <p class="card-text">Analiza y comprende la sociedad para generar un impacto positivo. Carreras en comunicación y psicología.</p>
+                                        <a href="carreras.html#sociales" class="btn btn-outline-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Derecho -->
+                            <div class="col-lg-5 col-md-6 mb-4 mx-2">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Derecho">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Derecho</h5>
+                                        <p class="card-text">Fórmate en los principios de la justicia y la ley para defender los derechos y el orden social.</p>
+                                        <a href="carreras.html#derecho" class="btn btn-outline-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tercer slide: Arte y Diseño y Arquitectura -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <!-- Arte y Diseño -->
+                            <div class="col-lg-5 col-md-6 mb-4 mx-2">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Arte y Diseño">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arte y Diseño</h5>
+                                        <p class="card-text">Expresa tu creatividad y transforma la comunicación visual con nuestras carreras en diseño gráfico y artes plásticas.</p>
+                                        <a href="carreras.html#arte" class="btn btn-outline-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Arquitectura -->
+                            <div class="col-lg-5 col-md-6 mb-4 mx-2">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Arquitectura">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arquitectura</h5>
+                                        <p class="card-text">Diseña espacios innovadores y sostenibles que transformen el entorno urbano y mejoren la calidad de vida de las personas.</p>
+                                        <a href="carreras.html#arquitectura" class="btn btn-outline-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCarreras" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCarreras" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Noticias y Eventos -->
+    <section id="noticias" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Últimas Noticias y Eventos</h2>
+                <p class="lead">Mantente al día con las novedades de nuestra comunidad universitaria.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Evento de Software">
+                        <div class="card-body">
+                            <h5 class="card-title">Evento de Software</h5>
+                            <p class="card-text">Expertos de la industria compartirán las últimas tendencias en desarrollo de software. Inscríbete ahora.</p>
+                            <a href="#" class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Evento de Ciencias de la Salud">
+                        <div class="card-body">
+                            <h5 class="card-title">Evento de Ciencias de la Salud</h5>
+                            <p class="card-text">Nuestros estudiantes de Ciencias de la Salud brindarán atención gratuita en la plaza central.</p>
+                            <a href="#" class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Evento de Arte">
+                        <div class="card-body">
+                            <h5 class="card-title">Evento de Arte</h5>
+                            <p class="card-text">Descubre el talento de nuestros estudiantes de la facultad de Arte y Diseño en la galería principal.</p>
+                            <a href="#" class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
+                    <p>
+                        Somos la Universidad Tecnologica de Nuevo Chimbote, comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
+                    <p><a href="nosotros.html" class="text-white" style="text-decoration: none;">Nosotros</a></p>
+                    <p><a href="carreras.html" class="text-white" style="text-decoration: none;">Carreras</a></p>
+                    <p><a href="admision.html" class="text-white" style="text-decoration: none;">Admisión</a></p>
+                    <p><a href="campus.html" class="text-white" style="text-decoration: none;">Campus</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
+                    <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Pacífico, Chimbote 02711, Perú</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
+                    <p><i class="bi bi-telephone-fill me-3"></i> +51 962 515 00</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p> © 2024 Copyright:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-primary">UTNC.edu.pe</strong>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
+
+</body>
+</html>
+

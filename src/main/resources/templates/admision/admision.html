@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisión - UTNC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container position-relative">
+            <h1 class="display-3 position-relative">Tu Futuro Comienza Aquí</h1>
+            <p class="lead position-relative">Proceso de admisión simple y transparente para nuevos estudiantes.</p>
+            <a href="#proceso" class="btn btn-primary btn-lg mt-3 position-relative">Conoce el Proceso</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5" id="proceso">
+        <!-- Proceso de Admisión -->
+        <section class="mb-5">
+            <div class="text-center mb-4">
+                <h2 class="display-4 fw-bold text-primary">Proceso de Admisión 2025</h2>
+                <p class="lead">Da el primer paso hacia tu futuro profesional en la UTNC</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <img src="image/estudiantes_utnc.svg" class="img-fluid rounded shadow" alt="Estudiantes UTNC">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <p class="mb-4">Forma parte de nuestra comunidad universitaria y prepárate para transformar el mundo con tus conocimientos y habilidades. Nuestro proceso de admisión está diseñado para identificar a estudiantes talentosos y comprometidos con su desarrollo académico y personal.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#modalidades" class="btn btn-primary btn-lg px-4">Conoce las modalidades</a>
+                        <a href="#contacto" class="btn btn-outline-primary btn-lg px-4">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fechas importantes - Banner -->
+        <div class="alert alert-primary p-4 mb-5 text-center shadow-sm">
+            <h4 class="alert-heading"><i class="bi bi-calendar-check me-2"></i>Próxima fecha de examen: 20 de Diciembre, 2025</h4>
+            <p class="mb-0">¡No pierdas la oportunidad de asegurar tu futuro profesional!</p>
+        </div>
+        
+        <div class="row">
+             <div class="col-lg-10 mx-auto">
+                 <section id="modalidades" class="mb-5">
+                    <div class="text-center mb-4">
+                        <div class="bg-primary p-3 rounded-circle d-inline-block mb-3">
+                            <i class="bi bi-mortarboard-fill text-white fs-3"></i>
+                        </div>
+                        <h2 class="text-primary">Modalidades de Ingreso</h2>
+                        <p class="lead">Elige la modalidad que mejor se adapte a tu perfil académico y comienza tu camino hacia el éxito profesional.</p>
+                    </div>
+                    <div class="accordion shadow-sm" id="accordionModalidades">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Examen de Admisión Ordinario
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionModalidades">
+                                <div class="accordion-body">
+                                    Dirigido a todos los egresados de educación secundaria. La evaluación consta de una prueba de conocimientos, aptitud académica y cultura general.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Primeros Puestos de Secundaria
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionModalidades">
+                                <div class="accordion-body">
+                                    Ingreso directo para los estudiantes que hayan ocupado el primer o segundo puesto en su promoción de secundaria en colegios de la región.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Titulados o Graduados
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionModalidades">
+                                <div class="accordion-body">
+                                    Modalidad para quienes ya cuentan con un título universitario o técnico y desean seguir una segunda carrera.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="requisitos" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary p-3 rounded-circle me-3">
+                            <i class="bi bi-clipboard-check-fill text-white fs-3"></i>
+                        </div>
+                        <h2 class="mb-0 text-primary">Requisitos Generales</h2>
+                    </div>
+                    <p class="lead mb-4">Para asegurar tu participación en nuestro proceso de admisión, necesitarás presentar los siguientes documentos:</p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-person-vcard-fill text-primary fs-4 me-2"></i>
+                                        <h5 class="card-title mb-0">Documentos Personales</h5>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Copia de DNI, Pasaporte o Carné de Extranjería</li>
+                                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Dos fotografías tamaño carné con fondo blanco</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-file-earmark-text-fill text-primary fs-4 me-2"></i>
+                                        <h5 class="card-title mb-0">Documentos Académicos</h5>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Certificado de Estudios secundarios completos y originales</li>
+                                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Ficha de inscripción debidamente llenada</li>
+                                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Comprobante de pago por derecho de admisión</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="cronograma" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary p-3 rounded-circle me-3">
+                            <i class="bi bi-calendar-event-fill text-white fs-3"></i>
+                        </div>
+                        <h2 class="mb-0 text-primary">Cronograma de Admisión</h2>
+                    </div>
+                    <p class="lead mb-4">Mantente al tanto de las fechas importantes de nuestro proceso de admisión para no perder ninguna oportunidad.</p>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="bg-primary text-white">
+                                        <tr>
+                                            <th scope="col" class="border-0">Actividad</th>
+                                            <th scope="col" class="border-0">Fecha de Inicio</th>
+                                            <th scope="col" class="border-0">Fecha de Cierre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="bi bi-pencil-square me-2 text-primary"></i>Inscripciones (modalidad ordinaria)</td>
+                                            <td>01 de Octubre, 2025</td>
+                                            <td>15 de Diciembre, 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-journal-check me-2 text-primary"></i>Examen de Admisión</td>
+                                            <td colspan="2" class="fw-bold">20 de Diciembre, 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-trophy me-2 text-primary"></i>Publicación de Resultados</td>
+                                            <td colspan="2">22 de Diciembre, 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-card-checklist me-2 text-primary"></i>Matrícula de Ingresantes</td>
+                                            <td>05 de Enero, 2026</td>
+                                            <td>15 de Febrero, 2026</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-mortarboard me-2 text-primary"></i>Inicio de Clases</td>
+                                            <td colspan="2">17 de Marzo, 2026</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Testimonios -->
+                <section id="testimonios" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary p-3 rounded-circle me-3">
+                            <i class="bi bi-chat-quote-fill text-white fs-3"></i>
+                        </div>
+                        <h2 class="mb-0 text-primary">Testimonios de Estudiantes</h2>
+                    </div>
+                    <p class="lead mb-4">Conoce las experiencias de nuestros estudiantes que pasaron por el proceso de admisión.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="rounded-circle me-3" alt="Estudiante" width="60" height="60">
+                                        <div>
+                                            <h5 class="card-title mb-1">María Fernández</h5>
+                                            <p class="text-muted mb-0">Ingeniería de Sistemas - 2do año</p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text"><i class="bi bi-quote fs-4 text-primary me-2"></i>El proceso de admisión fue muy organizado y transparente. Los asesores me guiaron en cada paso y ahora estoy estudiando lo que siempre soñé.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="rounded-circle me-3" alt="Estudiante" width="60" height="60">
+                                        <div>
+                                            <h5 class="card-title mb-1">Carlos Mendoza</h5>
+                                            <p class="text-muted mb-0">Medicina - 3er año</p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text"><i class="bi bi-quote fs-4 text-primary me-2"></i>Gracias a la modalidad de primeros puestos pude ingresar directamente. La UTNC me ha brindado todas las herramientas para desarrollarme profesionalmente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Preguntas Frecuentes -->
+                <section id="faq" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary p-3 rounded-circle me-3">
+                            <i class="bi bi-question-circle-fill text-white fs-3"></i>
+                        </div>
+                        <h2 class="mb-0 text-primary">Preguntas Frecuentes</h2>
+                    </div>
+                    <p class="lead mb-4">Resolvemos tus dudas sobre el proceso de admisión.</p>
+                    
+                    <div class="accordion shadow-sm" id="accordionFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                                    ¿Cuándo comienza el proceso de admisión?</button>
+                            </h2>
+                            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    El proceso de admisión para el año académico 2025 comienza el 1 de octubre de 2025. Te recomendamos estar atento a nuestras redes sociales para más información.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                                    ¿Puedo postular a más de una carrera?</button>
+                            </h2>
+                            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Sí, puedes postular hasta a dos carreras en orden de preferencia. En caso de no alcanzar el puntaje para tu primera opción, se considerará tu segunda opción.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                    ¿Ofrecen becas para estudiantes?</button>
+                            </h2>
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Sí, la UTNC ofrece diversos programas de becas y ayudas económicas para estudiantes destacados y de bajos recursos. Puedes consultar más información en nuestra oficina de bienestar estudiantil.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Contacto -->
+                <section id="contacto" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary p-3 rounded-circle me-3">
+                            <i class="bi bi-envelope-fill text-white fs-3"></i>
+                        </div>
+                        <h2 class="mb-0 text-primary">¿Tienes más preguntas?</h2>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <h5 class="mb-3">Contáctanos</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-2"></i>Av. Pacífico, Chimbote 02711, Perú</li>
+                                        <li class="mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i>admision@utnc.edu.pe</li>
+                                        <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-2"></i>+51 962 515 600</li>
+                                        <li><i class="bi bi-clock-fill text-primary me-2"></i>Lunes a Viernes: 8:00 AM - 5:00 PM</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="mb-3">Oficinas de Admisión</h5>
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.5332576529177!2d-78.5372899!3d-9.0750897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDQnMzAuMyJTIDc4wrAzMicxNC4yIlc!5e0!3m2!1ses!2spe!4v1620160472149!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
+                    <p>Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
+                    <p><a href="nosotros.html" class="text-white" style="text-decoration: none;">Nosotros</a></p>
+                    <p><a href="carreras.html" class="text-white" style="text-decoration: none;">Carreras</a></p>
+                    <p><a href="admision.html" class="text-white" style="text-decoration: none;">Admisión</a></p>
+                    <p><a href="campus.html" class="text-white" style="text-decoration: none;">Campus</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
+                    <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Pacífico, Chimbote 02711, Perú</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
+                    <p><i class="bi bi-telephone-fill me-3"></i> +51 962 515 600</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2024 Copyright: <a href="#" style="text-decoration: none;"><strong class="text-primary">UTNC.edu.pe</strong></a></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - UTNC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container position-relative">
+            <h1 class="display-3 position-relative">Estamos para Ayudarte</h1>
+            <p class="lead position-relative">Comunícate con nosotros y resuelve todas tus dudas.</p>
+            <a href="#formulario" class="btn btn-primary btn-lg mt-3 position-relative">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-md-4 bg-primary text-white p-4 d-flex flex-column justify-content-center">
+                                <h3 class="fw-bold mb-4">Información de Contacto</h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-geo-alt-fill fs-4 me-3"></i>
+                                    <p class="mb-0">Av. Pacífico, Chimbote 02711, Perú</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-telephone-fill fs-4 me-3"></i>
+                                    <p class="mb-0">+51 962 515 600</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-envelope-fill fs-4 me-3"></i>
+                                    <p class="mb-0">info@utnc.edu.pe</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-clock-fill fs-4 me-3"></i>
+                                    <p class="mb-0">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                                </div>
+                                <div class="mt-4">
+                                    <h5 class="mb-3">Síguenos</h5>
+                                    <div class="d-flex">
+                                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                                        <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+                                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 p-4">
+                                <h3 class="fw-bold mb-4 text-primary">Envíanos un Mensaje</h3>
+                                <p class="text-muted mb-4">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+        
+        <div class="row">
+                                <form id="contactForm" class="needs-validation" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="name" placeholder="Tu Nombre" required>
+                                                <label for="name">Nombre Completo</label>
+                                                <div class="invalid-feedback">
+                                                    Por favor, ingresa tu nombre.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                                                <label for="email">Correo Electrónico</label>
+                                                <div class="invalid-feedback">
+                                                    Por favor, ingresa un correo válido.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-floating">
+                                                <select class="form-select" id="carrera" required>
+                                                    <option value="" selected disabled>Selecciona una opción</option>
+                                                    <option value="Ingeniería">Ingeniería</option>
+                                                    <option value="Ciencias de la Salud">Ciencias de la Salud</option>
+                                                    <option value="Ciencias Sociales">Ciencias Sociales</option>
+                                                    <option value="Derecho">Derecho</option>
+                                                    <option value="Arte y Diseño">Arte y Diseño</option>
+                                                    <option value="Arquitectura">Arquitectura</option>
+                                                </select>
+                                                <label for="carrera">Carrera de Interés</label>
+                                                <div class="invalid-feedback">
+                                                    Por favor, selecciona una carrera.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control" id="edad" placeholder="Tu Edad" min="16" max="99" required>
+                                                <label for="edad">Edad</label>
+                                                <div class="invalid-feedback">
+                                                    Ingresa una edad válida (16-99).
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="dni" placeholder="Tu DNI" maxlength="8" required>
+                                                <label for="dni">DNI</label>
+                                                <div class="invalid-feedback">
+                                                    Ingresa un DNI válido de 8 dígitos.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Ej: Consulta sobre admisión" required>
+                                            <label for="subject">Asunto</label>
+                                            <div class="invalid-feedback">
+                                                Por favor, ingresa un asunto.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" style="height: 150px" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                            <label for="message">Mensaje</label>
+                                            <div class="invalid-feedback">
+                                                Por favor, escribe tu mensaje.
+                                            </div>
+                                        </div>
+                                        <div id="messageHint" class="form-text text-end">0/500 caracteres</div>
+                                    </div>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="submit" class="btn btn-primary btn-lg px-4">Enviar Mensaje</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mapa Google Maps -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <h3 class="fw-bold p-4 m-0 border-bottom">Nuestra Ubicación</h3>
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.google.com/maps?q=Av.+Pac%C3%ADfico,+Chimbote+02711,+Per%C3%BA&output=embed"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación UTNC"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Preguntas Frecuentes -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold mb-4 text-primary">Preguntas Frecuentes</h3>
+                        <div class="accordion" id="accordionFAQ">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ¿Cómo puedo postular a la UTNC?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Para postular a la UTNC, debes completar el formulario de admisión en nuestra página web o acercarte a nuestras oficinas. El proceso incluye un examen de admisión y una entrevista personal. Consulta nuestra sección de <a href="admision.html">Admisión</a> para más detalles.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ¿Cuáles son los requisitos para la matrícula?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Los requisitos para la matrícula incluyen: certificado de estudios secundarios, partida de nacimiento, copia de DNI, fotografías tamaño carnet y el pago de la matrícula. Los ingresantes recibirán instrucciones detalladas sobre el proceso.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        ¿Ofrecen becas o financiamiento?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Sí, la UTNC ofrece diversos programas de becas por excelencia académica, deportiva y situación socioeconómica. También contamos con convenios con entidades financieras para facilitar el pago de los estudios. Puedes consultar más información en nuestra oficina de Bienestar Estudiantil.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
+                    <p>Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
+                    <p><a href="nosotros.html" class="text-white" style="text-decoration: none;">Nosotros</a></p>
+                    <p><a href="carreras.html" class="text-white" style="text-decoration: none;">Carreras</a></p>
+                    <p><a href="admision.html" class="text-white" style="text-decoration: none;">Admisión</a></p>
+                    <p><a href="campus.html" class="text-white" style="text-decoration: none;">Campus</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
+                    <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Pacífico, Chimbote 02711, Perú</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
+                    <p><i class="bi bi-telephone-fill me-3"></i> +51 962-515-600</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2024 Copyright: <a href="#" style="text-decoration: none;"><strong class="text-primary">UTNC.edu.pe</strong></a></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
+
+    
+</body>
+</html>

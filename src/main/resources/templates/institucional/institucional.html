@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida en el Campus - UTNC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container position-relative">
+            <h1 class="display-3 position-relative">Vive la Experiencia UTNC</h1>
+            <p class="lead position-relative">Un campus moderno diseñado para tu desarrollo académico y personal.</p>
+            <a href="#instalaciones" class="btn btn-primary btn-lg mt-3 position-relative">Conoce Nuestras Instalaciones</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5" id="instalaciones">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Vida en el Campus</h1>
+            <p class="lead">Tu experiencia universitaria va más allá de las aulas.</p>
+        </div>
+
+        <section id="instalaciones" class="mb-5">
+            <h2 class="mb-4 text-center">Nuestras Instalaciones</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Biblioteca">
+                        <div class="card-body">
+                            <h5 class="card-title">Biblioteca Moderna</h5>
+                            <p class="card-text">Accede a una vasta colección de recursos físicos y digitales para potenciar tu investigación y estudio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Laboratorios">
+                        <div class="card-body">
+                            <h5 class="card-title">Laboratorios Equipados</h5>
+                            <p class="card-text">Pon en práctica tus conocimientos con tecnología de punta en nuestros laboratorios especializados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Áreas Deportivas">
+                        <div class="card-body">
+                            <h5 class="card-title">Áreas Deportivas</h5>
+                            <p class="card-text">Fomenta un estilo de vida saludable en nuestras canchas de fútbol, baloncesto y gimnasio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="actividades" class="bg-light p-5 rounded mb-5">
+            <h2 class="mb-4 text-center">Clubes y Actividades</h2>
+            <p class="text-center lead mb-4">Participa, aprende y comparte tus pasiones con otros estudiantes.</p>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center mb-4">
+                    <div class="p-4 shadow-sm rounded-circle d-inline-block bg-primary text-white">
+                       <i class="bi bi-code-slash fs-1"></i>
+                    </div>
+                    <h5 class="mt-3">Club de Programación</h5>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-4">
+                     <div class="p-4 shadow-sm rounded-circle d-inline-block bg-success text-white">
+                       <i class="bi bi-megaphone-fill fs-1"></i>
+                    </div>
+                    <h5 class="mt-3">Club de Debate</h5>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-4">
+                     <div class="p-4 shadow-sm rounded-circle d-inline-block bg-warning text-white">
+                       <i class="bi bi-palette-fill fs-1"></i>
+                    </div>
+                    <h5 class="mt-3">Taller de Arte</h5>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-4">
+                     <div class="p-4 shadow-sm rounded-circle d-inline-block bg-info text-white">
+                       <i class="bi bi-music-note-beamed fs-1"></i>
+                    </div>
+                    <h5 class="mt-3">Elenco de Música</h5>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="mb-5">
+            <h2 class="mb-4 text-center">Galería del Campus</h2>
+            <p class="text-center lead mb-4">Conoce nuestros espacios y la vida universitaria.</p>
+            <div class="row g-3">
+                <div class="col-md-4 mb-3">
+                    <div class="gallery-item" style="height: 250px; overflow: hidden;">
+                        <img src="image/campus_principal.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Campus principal">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="gallery-item" style="height: 250px; overflow: hidden;">
+                        <img src="image/estudiantes_campus.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Estudiantes en el campus">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="gallery-item" style="height: 250px; overflow: hidden;">
+                        <img src="image/auditorio.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Auditorio">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="gallery-item" style="height: 300px; overflow: hidden;">
+                        <img src="image/cafeteria.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Cafetería">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="gallery-item" style="height: 300px; overflow: hidden;">
+                        <img src="image/areas_verdes.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Áreas verdes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
+                    <p>Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
+                    <p><a href="nosotros.html" class="text-white" style="text-decoration: none;">Nosotros</a></p>
+                    <p><a href="carreras.html" class="text-white" style="text-decoration: none;">Carreras</a></p>
+                    <p><a href="admision.html" class="text-white" style="text-decoration: none;">Admisión</a></p>
+                    <p><a href="campus.html" class="text-white" style="text-decoration: none;">Campus</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
+                    <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Universitaria 123, Nuevo Chimbote, Perú</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
+                    <p><i class="bi bi-telephone-fill me-3"></i> +51 987 654 321</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2024 Copyright: <a href="#" style="text-decoration: none;"><strong class="text-primary">UTNC.edu.pe</strong></a></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
+
+</body>
+</html>

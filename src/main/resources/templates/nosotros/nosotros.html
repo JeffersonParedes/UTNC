@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - UTNC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container position-relative">
+            <h1 class="display-3 position-relative">Conoce Nuestra Historia</h1>
+            <p class="lead position-relative">Tradición, excelencia y compromiso con la educación superior.</p>
+            <a href="#historia" class="btn btn-primary btn-lg px-4 me-2 position-relative">Nuestra Historia</a>
+            <a href="#equipo" class="btn btn-outline-light btn-lg px-4 position-relative">Nuestro Equipo</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <!-- Historia Section -->
+        <section id="historia" class="mb-5 pt-4">
+            <div class="text-center mb-4">
+                <h2 class="display-6 fw-bold text-primary">Nuestra Historia</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Historia de la Universidad">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">Fundada en 2010, la Universidad Tecnológica de Nuevo Chimbote (UTNC) nació con el propósito de ser un faro de educación superior en la región.</p>
+                    <p>Ofreciendo programas de alta calidad y fomentando la investigación aplicada, hemos crecido hasta convertirnos en una institución líder, reconocida por nuestra excelencia académica y nuestro compromiso con el desarrollo social y económico local.</p>
+                    <p>A lo largo de estos años, hemos formado a más de 5,000 profesionales que hoy contribuyen al desarrollo del país y representan los valores de nuestra institución en diversos campos del conocimiento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misión y Visión Section -->
+        <section id="mision-vision" class="mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="display-6 fw-bold text-primary">Misión y Visión</h2>
+                    <p class="lead">Nuestro propósito y hacia dónde nos dirigimos</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary rounded-circle p-3 me-3">
+                                    <i class="bi bi-bullseye text-white fs-4"></i>
+                                </div>
+                                <h3 class="fw-bold mb-0">Misión</h3>
+                            </div>
+                            <p>Formar profesionales competentes, íntegros y con visión global, capaces de enfrentar los desafíos del mundo moderno a través de una educación innovadora, la investigación y la vinculación con la sociedad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary rounded-circle p-3 me-3">
+                                    <i class="bi bi-eye text-white fs-4"></i>
+                                </div>
+                                <h3 class="fw-bold mb-0">Visión</h3>
+                            </div>
+                            <p>Ser una universidad líder y referente en el norte del país por su calidad académica, su contribución al conocimiento y su impacto positivo en el desarrollo sostenible de la comunidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valores Section -->
+        <section id="valores" class="mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="display-6 fw-bold text-primary">Nuestros Valores</h2>
+                    <p class="lead">Principios que guían nuestro actuar diario</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                <i class="bi bi-award fs-1 text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold">Excelencia Académica</h4>
+                            <p>Buscamos constantemente la calidad y el rigor en todos nuestros procesos educativos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                <i class="bi bi-shield-check fs-1 text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold">Integridad y Ética</h4>
+                            <p>Actuamos con honestidad, transparencia y respeto en todas nuestras interacciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                <i class="bi bi-lightbulb fs-1 text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold">Innovación</h4>
+                            <p>Fomentamos la creatividad y el pensamiento disruptivo para resolver problemas complejos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                <i class="bi bi-people fs-1 text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold">Responsabilidad Social</h4>
+                            <p>Contribuimos activamente al bienestar de nuestra comunidad y al desarrollo sostenible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                <i class="bi bi-chat-square-text fs-1 text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold">Pensamiento Crítico</h4>
+                            <p>Promovemos el análisis reflexivo y la evaluación rigurosa de ideas y argumentos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                <i class="bi bi-globe fs-1 text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold">Visión Global</h4>
+                            <p>Preparamos a nuestros estudiantes para ser ciudadanos del mundo con perspectiva internacional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo Directivo Section -->
+        <section id="equipo" class="mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="display-6 fw-bold text-primary">Nuestro Equipo Directivo</h2>
+                    <p class="lead">Líderes comprometidos con la excelencia educativa</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Rector">
+                        <div class="card-body p-4 text-center">
+                            <h4 class="fw-bold">Dr. Carlos Mendoza</h4>
+                            <p class="text-primary mb-2">Rector</p>
+                            <p class="mb-3">Doctor en Educación con más de 25 años de experiencia en gestión universitaria.</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" class="card-img-top" alt="Vicerrectora Académica">
+                        <div class="card-body p-4 text-center">
+                            <h4 class="fw-bold">Dra. Laura Sánchez</h4>
+                            <p class="text-primary mb-2">Vicerrectora Académica</p>
+                            <p class="mb-3">PhD en Ciencias de la Educación, especialista en innovación educativa y calidad académica.</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Director de Investigación">
+                        <div class="card-body p-4 text-center">
+                            <h4 class="fw-bold">Dr. Miguel Rodríguez</h4>
+                            <p class="text-primary mb-2">Director de Investigación</p>
+                            <p class="mb-3">Investigador con múltiples publicaciones internacionales y proyectos de innovación tecnológica.</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logros Section -->
+        <section id="logros">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="display-6 fw-bold text-primary">Nuestros Logros</h2>
+                    <p class="lead">Resultados que nos enorgullecen</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-3">95%</h2>
+                            <p class="mb-0">Tasa de empleabilidad de nuestros egresados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-3">50+</h2>
+                            <p class="mb-0">Convenios internacionales con universidades de prestigio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-3">120+</h2>
+                            <p class="mb-0">Proyectos de investigación desarrollados en los últimos 5 años</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-3">15</h2>
+                            <p class="mb-0">Carreras acreditadas internacionalmente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
+                    <p>Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
+                    <p><a href="nosotros.html" class="text-white" style="text-decoration: none;">Nosotros</a></p>
+                    <p><a href="carreras.html" class="text-white" style="text-decoration: none;">Carreras</a></p>
+                    <p><a href="admision.html" class="text-white" style="text-decoration: none;">Admisión</a></p>
+                    <p><a href="campus.html" class="text-white" style="text-decoration: none;">Campus</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
+                    <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Universitaria 123, Nuevo Chimbote, Perú</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
+                    <p><i class="bi bi-telephone-fill me-3"></i> +51 987 654 321</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2024 Copyright: <a href="#" style="text-decoration: none;"><strong class="text-primary">UTNC.edu.pe</strong></a></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
+
+</body>
+</html>
