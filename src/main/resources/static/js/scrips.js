@@ -1,10 +1,64 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('UTNC Website Ready!');
   
-    // Validación personalizada para el Formulario de Contacto
-    const form = document.getElementById('contactForm');
-    if (form) {
-      // ... (existing contact form logic remains the same) ...
+    // RESTful Contact Form Logic
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                carrera: document.getElementById('carrera').value,
+                dni: document.getElementById('dni').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('/api/v1/contacto', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const resultContainer = document.getElementById('contact-form-result');
+                if (!resultContainer) {
+                    resultContainer = document.createElement('div');
+                    resultContainer.id = 'contact-form-result';
+                    contactForm.parentNode.insertBefore(resultContainer, contactForm.nextSibling);
+                }
+
+                if (response.ok) {
+                    const result = await response.json();
+                    contactForm.style.display = 'none';
+                    resultContainer.innerHTML = `<div class="alert alert-success"><h5>Mensaje Enviado</h5><p>${result.message}</p></div>`;
+                } else {
+                    const errors = await response.json();
+                    // Clear previous errors
+                    document.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+                    document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+
+                    // Display new errors
+                    for (const field in errors) {
+                        const input = document.getElementById(field);
+                        if (input) {
+                            input.classList.add('is-invalid');
+                            const errorDiv = document.createElement('div');
+                            errorDiv.className = 'invalid-feedback d-block';
+                            errorDiv.innerText = errors[field];
+                            input.parentNode.appendChild(errorDiv);
+                        }
+                    }
+                    resultContainer.innerHTML = ''; // Clear general result message if there are specific errors
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
     }
 
     // Multi-step form logic for inscription page
