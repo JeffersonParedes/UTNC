@@ -52,6 +52,62 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        inscriptionForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                dni: document.getElementById('dni').value,
+                birthDate: document.getElementById('birthDate').value,
+                gender: document.getElementById('gender').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                schoolName: document.getElementById('schoolName').value,
+                graduationYear: document.getElementById('graduationYear').value,
+                career: document.getElementById('career').value,
+                hasDisability: document.getElementById('hasDisability').checked,
+                emergencyContact: document.getElementById('emergencyContact').value,
+                emergencyPhone: document.getElementById('emergencyPhone').value,
+                acceptTerms: document.getElementById('acceptTerms').checked
+            };
+
+            try {
+                const response = await fetch('/api/v1/inscripciones', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    inscriptionForm.innerHTML = `<div class="alert alert-success"><h5>¡Inscripción Exitosa!</h5><p>${result.message}</p></div>`;
+                } else {
+                    const errors = await response.json();
+                    // Clear previous errors
+                    document.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+                    document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+
+                    // Display new errors
+                    for (const field in errors) {
+                        const input = document.getElementById(field);
+                        if (input) {
+                            input.classList.add('is-invalid');
+                            const errorDiv = document.createElement('div');
+                            errorDiv.className = 'invalid-feedback d-block';
+                            errorDiv.innerText = errors[field];
+                            input.parentNode.appendChild(errorDiv);
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                // Handle network errors
+            }
+        });
+
         // Initially show the first step
         showStep(currentStep);
     }
