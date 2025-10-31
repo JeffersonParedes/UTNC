@@ -1,0 +1,136 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#e9ecef"/>
+  
+  <!-- Back wall -->
+  <rect x="0" y="100" width="800" height="350" fill="#ffffff"/>
+  
+  <!-- Smart board -->
+  <rect x="250" y="150" width="300" height="180" fill="#343a40" stroke="#6c757d" stroke-width="3"/>
+  <rect x="260" y="160" width="280" height="160" fill="#007bff"/>
+  
+  <!-- Content on smart board -->
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">INGENIERÍA DE SOFTWARE</text>
+  <circle cx="320" cy="220" r="20" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="320" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">UML</text>
+  <rect x="380" y="210" width="60" height="20" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="410" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff">Diagrama</text>
+  <polygon points="460,220 480,210 480,230" fill="#ffffff"/>
+  <line x1="350" y1="220" x2="380" y2="220" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Equations and diagrams -->
+  <text x="300" y="260" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">if (condition) {</text>
+  <text x="320" y="280" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">execute();</text>
+  <text x="300" y="300" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">}</text>
+  
+  <!-- Professor -->
+  <g id="professor">
+    <circle cx="200" cy="280" r="15" fill="#fdbcb4"/>
+    <rect x="193" y="293" width="14" height="30" fill="#343a40"/>
+    <rect x="195" y="318" width="10" height="20" fill="#6c757d"/>
+    <!-- Pointing gesture -->
+    <ellipse cx="180" cy="300" rx="4" ry="12" fill="#fdbcb4"/>
+    <ellipse cx="220" cy="305" rx="4" ry="10" fill="#fdbcb4"/>
+  </g>
+  
+  <!-- Student desks (arranged in rows) -->
+  <!-- Front row -->
+  <rect x="100" y="380" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="220" y="380" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="340" y="380" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="460" y="380" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="580" y="380" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  
+  <!-- Second row -->
+  <rect x="100" y="450" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="220" y="450" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="340" y="450" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="460" y="450" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="580" y="450" width="80" height="40" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  
+  <!-- Students at desks -->
+  <g id="student1">
+    <circle cx="140" cy="360" r="10" fill="#f4c2a1"/>
+    <rect x="137" y="368" width="6" height="15" fill="#007bff"/>
+  </g>
+  
+  <g id="student2">
+    <circle cx="260" cy="360" r="10" fill="#fdbcb4"/>
+    <rect x="257" y="368" width="6" height="15" fill="#dc3545"/>
+  </g>
+  
+  <g id="student3">
+    <circle cx="380" cy="360" r="10" fill="#f4c2a1"/>
+    <rect x="377" y="368" width="6" height="15" fill="#28a745"/>
+  </g>
+  
+  <g id="student4">
+    <circle cx="500" cy="360" r="10" fill="#fdbcb4"/>
+    <rect x="497" y="368" width="6" height="15" fill="#ffc107"/>
+  </g>
+  
+  <g id="student5">
+    <circle cx="620" cy="360" r="10" fill="#f4c2a1"/>
+    <rect x="617" y="368" width="6" height="15" fill="#6f42c1"/>
+  </g>
+  
+  <!-- Back row students -->
+  <g id="student6">
+    <circle cx="140" cy="430" r="10" fill="#fdbcb4"/>
+    <rect x="137" y="438" width="6" height="15" fill="#20c997"/>
+  </g>
+  
+  <g id="student7">
+    <circle cx="260" cy="430" r="10" fill="#f4c2a1"/>
+    <rect x="257" y="438" width="6" height="15" fill="#fd7e14"/>
+  </g>
+  
+  <g id="student8">
+    <circle cx="500" cy="430" r="10" fill="#fdbcb4"/>
+    <rect x="497" y="438" width="6" height="15" fill="#e83e8c"/>
+  </g>
+  
+  <!-- Laptops on desks -->
+  <rect x="125" y="385" width="30" height="20" fill="#343a40"/>
+  <rect x="128" y="388" width="24" height="14" fill="#6c757d"/>
+  
+  <rect x="245" y="385" width="30" height="20" fill="#343a40"/>
+  <rect x="248" y="388" width="24" height="14" fill="#6c757d"/>
+  
+  <rect x="485" y="385" width="30" height="20" fill="#343a40"/>
+  <rect x="488" y="388" width="24" height="14" fill="#6c757d"/>
+  
+  <!-- Books and notebooks -->
+  <rect x="365" y="385" width="15" height="3" fill="#28a745"/>
+  <rect x="365" y="390" width="12" height="3" fill="#dc3545"/>
+  <rect x="605" y="385" width="18" height="3" fill="#007bff"/>
+  
+  <!-- Projector -->
+  <rect x="380" y="120" width="40" height="20" fill="#6c757d"/>
+  <circle cx="400" cy="125" r="5" fill="#343a40"/>
+  <path d="M 400 140 L 400 150 L 250 150" stroke="#ffc107" stroke-width="2" fill="none"/>
+  
+  <!-- Ceiling lights -->
+  <ellipse cx="200" cy="110" rx="30" ry="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <ellipse cx="400" cy="110" rx="30" ry="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <ellipse cx="600" cy="110" rx="30" ry="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  
+  <!-- Windows -->
+  <rect x="50" y="180" width="60" height="100" fill="#87ceeb" stroke="#4682b4" stroke-width="3"/>
+  <line x1="80" y1="180" x2="80" y2="280" stroke="#4682b4" stroke-width="2"/>
+  <line x1="50" y1="230" x2="110" y2="230" stroke="#4682b4" stroke-width="2"/>
+  
+  <rect x="690" y="180" width="60" height="100" fill="#87ceeb" stroke="#4682b4" stroke-width="3"/>
+  <line x1="720" y1="180" x2="720" y2="280" stroke="#4682b4" stroke-width="2"/>
+  <line x1="690" y1="230" x2="750" y2="230" stroke="#4682b4" stroke-width="2"/>
+  
+  <!-- Air conditioning unit -->
+  <rect x="650" y="130" width="40" height="20" fill="#adb5bd"/>
+  <rect x="655" y="135" width="30" height="10" fill="#6c757d"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#003366">AULA MODERNA</text>
+</svg>

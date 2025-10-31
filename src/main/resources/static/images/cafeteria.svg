@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Fondo con gradiente cálido -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5e6" />
+      <stop offset="100%" stop-color="#ffe6cc" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg-gradient)" />
+  
+  <!-- Paredes de la cafetería -->
+  <rect x="50" y="100" width="700" height="300" fill="#f9f9f9" stroke="#666" stroke-width="2" />
+  
+  <!-- Suelo -->
+  <rect x="50" y="350" width="700" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  
+  <!-- Barra de cafetería -->
+  <rect x="50" y="150" width="200" height="200" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <rect x="50" y="150" width="200" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Estantes detrás de la barra -->
+  <rect x="50" y="100" width="200" height="50" fill="#996633" stroke="#663300" stroke-width="1" />
+  <line x1="100" y1="100" x2="100" y2="150" stroke="#663300" stroke-width="1" />
+  <line x1="150" y1="100" x2="150" y2="150" stroke="#663300" stroke-width="1" />
+  <line x1="200" y1="100" x2="200" y2="150" stroke="#663300" stroke-width="1" />
+  
+  <!-- Productos en los estantes (simplificados) -->
+  <rect x="60" y="110" width="30" height="30" fill="#ff9933" stroke="#cc6600" stroke-width="1" />
+  <rect x="110" y="110" width="30" height="30" fill="#cc6600" stroke="#993300" stroke-width="1" />
+  <rect x="160" y="110" width="30" height="30" fill="#ff9933" stroke="#cc6600" stroke-width="1" />
+  <rect x="210" y="110" width="30" height="30" fill="#cc6600" stroke="#993300" stroke-width="1" />
+  
+  <!-- Máquina de café -->
+  <rect x="100" y="180" width="100" height="120" fill="#999999" stroke="#666666" stroke-width="2" />
+  <rect x="120" y="200" width="60" height="40" fill="#666666" stroke="#333333" stroke-width="1" />
+  <circle cx="150" cy="260" r="10" fill="#333333" stroke="#000000" stroke-width="1" />
+  
+  <!-- Mesas y sillas -->
+  <!-- Mesa 1 -->
+  <circle cx="350" cy="200" r="40" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <!-- Sillas mesa 1 -->
+  <rect x="320" y="150" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="360" y="150" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="320" y="230" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="360" y="230" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Mesa 2 -->
+  <circle cx="500" cy="200" r="40" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <!-- Sillas mesa 2 -->
+  <rect x="470" y="150" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="510" y="150" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="470" y="230" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="510" y="230" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Mesa 3 -->
+  <circle cx="650" cy="200" r="40" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <!-- Sillas mesa 3 -->
+  <rect x="620" y="150" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="660" y="150" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="620" y="230" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="660" y="230" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Mesa 4 -->
+  <circle cx="350" cy="320" r="40" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <!-- Sillas mesa 4 -->
+  <rect x="320" y="270" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="360" y="270" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="320" y="350" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="360" y="350" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Mesa 5 -->
+  <circle cx="500" cy="320" r="40" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <!-- Sillas mesa 5 -->
+  <rect x="470" y="270" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="510" y="270" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="470" y="350" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="510" y="350" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Mesa 6 -->
+  <circle cx="650" cy="320" r="40" fill="#cc9966" stroke="#996633" stroke-width="2" />
+  <!-- Sillas mesa 6 -->
+  <rect x="620" y="270" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="660" y="270" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="620" y="350" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  <rect x="660" y="350" width="20" height="20" fill="#996633" stroke="#663300" stroke-width="1" />
+  
+  <!-- Personas (simplificadas) -->
+  <circle cx="330" cy="160" r="8" fill="#ffcc99" /> <!-- Persona 1 -->
+  <circle cx="370" cy="160" r="8" fill="#ffcc99" /> <!-- Persona 2 -->
+  <circle cx="480" cy="160" r="8" fill="#ffcc99" /> <!-- Persona 3 -->
+  <circle cx="520" cy="160" r="8" fill="#ffcc99" /> <!-- Persona 4 -->
+  <circle cx="630" cy="160" r="8" fill="#ffcc99" /> <!-- Persona 5 -->
+  <circle cx="670" cy="160" r="8" fill="#ffcc99" /> <!-- Persona 6 -->
+  
+  <!-- Ventanas -->
+  <rect x="600" y="120" width="100" height="60" fill="#b3e0ff" stroke="#666" stroke-width="1" />
+  <line x1="650" y1="120" x2="650" y2="180" stroke="#666" stroke-width="1" />
+  <line x1="600" y1="150" x2="700" y2="150" stroke="#666" stroke-width="1" />
+  
+  <!-- Texto "CAFETERÍA" -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#663300">CAFETERÍA</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#663300">Universidad Tecnológica del Norte</text>
+</svg>

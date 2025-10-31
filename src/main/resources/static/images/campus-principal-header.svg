@@ -1,0 +1,152 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cielo con gradiente -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo del cielo -->
+  <rect width="1200" height="600" fill="url(#skyGradient)"/>
+  
+  <!-- Nubes -->
+  <ellipse cx="200" cy="80" rx="40" ry="20" fill="white" opacity="0.8"/>
+  <ellipse cx="220" cy="75" rx="35" ry="18" fill="white" opacity="0.8"/>
+  <ellipse cx="180" cy="75" rx="30" ry="15" fill="white" opacity="0.8"/>
+  
+  <ellipse cx="800" cy="100" rx="45" ry="22" fill="white" opacity="0.7"/>
+  <ellipse cx="825" cy="95" rx="38" ry="20" fill="white" opacity="0.7"/>
+  <ellipse cx="775" cy="95" rx="32" ry="16" fill="white" opacity="0.7"/>
+  
+  <!-- Montañas de fondo -->
+  <polygon points="0,300 200,200 400,250 600,180 800,220 1000,160 1200,200 1200,600 0,600" fill="#4A90E2" opacity="0.3"/>
+  
+  <!-- Edificio principal del campus (centro) -->
+  <rect x="400" y="200" width="400" height="300" fill="url(#buildingGradient)" stroke="#D0D0D0" stroke-width="2"/>
+  
+  <!-- Techo del edificio principal -->
+  <polygon points="380,200 420,160 780,160 820,200" fill="url(#roofGradient)"/>
+  
+  <!-- Torre del reloj -->
+  <rect x="580" y="120" width="40" height="80" fill="url(#buildingGradient)" stroke="#D0D0D0" stroke-width="1"/>
+  <polygon points="575,120 585,100 615,100 625,120" fill="url(#roofGradient)"/>
+  
+  <!-- Reloj -->
+  <circle cx="600" cy="140" r="15" fill="white" stroke="#333" stroke-width="2"/>
+  <line x1="600" y1="140" x2="600" y2="130" stroke="#333" stroke-width="2"/>
+  <line x1="600" y1="140" x2="608" y2="140" stroke="#333" stroke-width="1"/>
+  
+  <!-- Ventanas del edificio principal -->
+  <rect x="420" y="230" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="470" y="230" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="520" y="230" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="650" y="230" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="700" y="230" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="750" y="230" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  
+  <rect x="420" y="300" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="470" y="300" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="520" y="300" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="650" y="300" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="700" y="300" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="750" y="300" width="30" height="40" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  
+  <!-- Entrada principal -->
+  <rect x="570" y="400" width="60" height="100" fill="#8B4513"/>
+  <rect x="580" y="410" width="40" height="90" fill="#654321"/>
+  
+  <!-- Escalones -->
+  <rect x="550" y="480" width="100" height="10" fill="#C0C0C0"/>
+  <rect x="540" y="490" width="120" height="10" fill="#B0B0B0"/>
+  
+  <!-- Edificio lateral izquierdo -->
+  <rect x="150" y="280" width="200" height="220" fill="url(#buildingGradient)" stroke="#D0D0D0" stroke-width="2"/>
+  <polygon points="140,280 160,250 350,250 370,280" fill="url(#roofGradient)"/>
+  
+  <!-- Ventanas edificio izquierdo -->
+  <rect x="170" y="310" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="210" y="310" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="250" y="310" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="290" y="310" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  
+  <rect x="170" y="370" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="210" y="370" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="250" y="370" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="290" y="370" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  
+  <!-- Edificio lateral derecho -->
+  <rect x="850" y="300" width="180" height="200" fill="url(#buildingGradient)" stroke="#D0D0D0" stroke-width="2"/>
+  <polygon points="840,300 860,270 1020,270 1040,300" fill="url(#roofGradient)"/>
+  
+  <!-- Ventanas edificio derecho -->
+  <rect x="870" y="330" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="910" y="330" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="950" y="330" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="990" y="330" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  
+  <rect x="870" y="390" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="910" y="390" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="950" y="390" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  <rect x="990" y="390" width="25" height="35" fill="#4A90E2" stroke="#333" stroke-width="1"/>
+  
+  <!-- Áreas verdes y jardines -->
+  <ellipse cx="300" cy="520" rx="80" ry="30" fill="#228B22"/>
+  <ellipse cx="900" cy="540" rx="60" ry="25" fill="#228B22"/>
+  <ellipse cx="100" cy="550" rx="70" ry="20" fill="#228B22"/>
+  
+  <!-- Árboles -->
+  <ellipse cx="120" cy="480" rx="25" ry="40" fill="#228B22"/>
+  <rect x="115" y="500" width="10" height="30" fill="#8B4513"/>
+  
+  <ellipse cx="320" cy="470" rx="30" ry="45" fill="#228B22"/>
+  <rect x="315" y="495" width="10" height="35" fill="#8B4513"/>
+  
+  <ellipse cx="880" cy="490" rx="28" ry="42" fill="#228B22"/>
+  <rect x="875" y="510" width="10" height="32" fill="#8B4513"/>
+  
+  <ellipse cx="1080" cy="485" rx="25" ry="38" fill="#228B22"/>
+  <rect x="1075" y="505" width="10" height="30" fill="#8B4513"/>
+  
+  <!-- Caminos y senderos -->
+  <rect x="0" y="520" width="1200" height="20" fill="#A0A0A0"/>
+  <rect x="350" y="500" width="500" height="15" fill="#A0A0A0"/>
+  
+  <!-- Líneas del camino -->
+  <rect x="0" y="528" width="1200" height="2" fill="white" opacity="0.8"/>
+  <rect x="350" y="506" width="500" height="2" fill="white" opacity="0.8"/>
+  
+  <!-- Estudiantes (figuras simples) -->
+  <circle cx="250" cy="510" r="8" fill="#FFB6C1"/>
+  <rect x="245" y="518" width="10" height="20" fill="#4169E1"/>
+  <rect x="243" y="538" width="6" height="15" fill="#000"/>
+  <rect x="251" y="538" width="6" height="15" fill="#000"/>
+  
+  <circle cx="950" cy="515" r="8" fill="#DEB887"/>
+  <rect x="945" y="523" width="10" height="20" fill="#DC143C"/>
+  <rect x="943" y="543" width="6" height="15" fill="#000"/>
+  <rect x="951" y="543" width="6" height="15" fill="#000"/>
+  
+  <!-- Bandera de la universidad -->
+  <rect x="50" y="350" width="5" height="100" fill="#8B4513"/>
+  <rect x="55" y="350" width="40" height="25" fill="#FF0000"/>
+  <rect x="55" y="375" width="40" height="25" fill="#FFFFFF"/>
+  <rect x="55" y="400" width="40" height="25" fill="#0000FF"/>
+  
+  <!-- Sol -->
+  <circle cx="1050" cy="100" r="30" fill="#FFD700" opacity="0.8"/>
+  <line x1="1020" y1="70" x2="1010" y2="60" stroke="#FFD700" stroke-width="3"/>
+  <line x1="1080" y1="70" x2="1090" y2="60" stroke="#FFD700" stroke-width="3"/>
+  <line x1="1020" y1="130" x2="1010" y2="140" stroke="#FFD700" stroke-width="3"/>
+  <line x1="1080" y1="130" x2="1090" y2="140" stroke="#FFD700" stroke-width="3"/>
+  <line x1="990" y1="100" x2="980" y2="100" stroke="#FFD700" stroke-width="3"/>
+  <line x1="1110" y1="100" x2="1120" y2="100" stroke="#FFD700" stroke-width="3"/>
+</svg>

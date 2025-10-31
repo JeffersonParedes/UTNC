@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bridgeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#708090;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F4F4F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="800" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="320" width="800" height="80" fill="#8FBC8F"/>
+  
+  <!-- Bridge structure -->
+  <rect x="0" y="280" width="800" height="40" fill="url(#bridgeGradient)"/>
+  
+  <!-- Bridge pillars -->
+  <rect x="150" y="200" width="30" height="120" fill="#696969"/>
+  <rect x="350" y="180" width="30" height="140" fill="#696969"/>
+  <rect x="550" y="200" width="30" height="120" fill="#696969"/>
+  
+  <!-- Bridge cables -->
+  <line x1="165" y1="200" x2="365" y2="180" stroke="#2F4F4F" stroke-width="3"/>
+  <line x1="365" y1="180" x2="565" y2="200" stroke="#2F4F4F" stroke-width="3"/>
+  
+  <!-- Suspension cables -->
+  <line x1="165" y1="220" x2="200" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="165" y1="220" x2="250" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="165" y1="220" x2="300" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  
+  <line x1="365" y1="200" x2="300" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="365" y1="200" x2="400" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="365" y1="200" x2="450" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="365" y1="200" x2="500" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  
+  <line x1="565" y1="220" x2="500" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="565" y1="220" x2="550" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  <line x1="565" y1="220" x2="600" y2="280" stroke="#2F4F4F" stroke-width="2"/>
+  
+  <!-- Construction equipment -->
+  <g transform="translate(50, 250)">
+    <!-- Crane -->
+    <rect x="0" y="20" width="8" height="60" fill="#FF6B35"/>
+    <rect x="-15" y="0" width="38" height="8" fill="#FF6B35"/>
+    <rect x="-5" y="8" width="18" height="6" fill="#FF6B35"/>
+    <line x1="23" y1="4" x2="80" y2="4" stroke="#FF6B35" stroke-width="3"/>
+    <line x1="80" y1="4" x2="80" y2="40" stroke="#FF6B35" stroke-width="2"/>
+    <rect x="75" y="40" width="10" height="8" fill="#FFD700"/>
+  </g>
+  
+  <!-- Buildings in background -->
+  <rect x="650" y="150" width="60" height="170" fill="#4682B4" opacity="0.7"/>
+  <rect x="720" y="180" width="50" height="140" fill="#4682B4" opacity="0.7"/>
+  
+  <!-- Road markings -->
+  <rect x="100" y="295" width="40" height="5" fill="#FFFF00"/>
+  <rect x="180" y="295" width="40" height="5" fill="#FFFF00"/>
+  <rect x="260" y="295" width="40" height="5" fill="#FFFF00"/>
+  <rect x="340" y="295" width="40" height="5" fill="#FFFF00"/>
+  <rect x="420" y="295" width="40" height="5" fill="#FFFF00"/>
+  <rect x="500" y="295" width="40" height="5" fill="#FFFF00"/>
+  <rect x="580" y="295" width="40" height="5" fill="#FFFF00"/>
+  
+  <!-- Engineering tools -->
+  <g transform="translate(600, 80)">
+    <!-- Hard hat -->
+    <ellipse cx="30" cy="25" rx="25" ry="15" fill="#FFD700"/>
+    <ellipse cx="30" cy="20" rx="20" ry="12" fill="#FFA500"/>
+    
+    <!-- Blueprint roll -->
+    <rect x="70" y="10" width="40" height="8" fill="#E6E6FA" rx="4"/>
+    <rect x="70" y="20" width="40" height="8" fill="#E6E6FA" rx="4"/>
+    <rect x="70" y="30" width="40" height="8" fill="#E6E6FA" rx="4"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F4F4F">INGENIERÍA CIVIL</text>
+</svg>
