@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Fondo con gradiente azul claro -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6f2ff" />
+      <stop offset="100%" stop-color="#b3d9ff" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg-gradient)" />
+  
+  <!-- Edificio universitario en el fondo -->
+  <rect x="100" y="100" width="600" height="250" fill="#f0f0f0" stroke="#666" stroke-width="2" />
+  <rect x="350" y="250" width="100" height="100" fill="#f0f0f0" stroke="#666" stroke-width="2" />
+  <rect x="375" y="300" width="50" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  <rect x="150" y="150" width="50" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  <rect x="250" y="150" width="50" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  <rect x="350" y="150" width="50" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  <rect x="450" y="150" width="50" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  <rect x="550" y="150" width="50" height="50" fill="#d9d9d9" stroke="#666" stroke-width="1" />
+  <polygon points="100,100 400,20 700,100" fill="#d9d9d9" stroke="#666" stroke-width="2" />
+  
+  <!-- Estudiante 1 (izquierda) -->
+  <circle cx="200" cy="400" r="30" fill="#ffcc99" /> <!-- Cabeza -->
+  <rect x="190" y="430" width="20" height="60" fill="#3366cc" /> <!-- Cuerpo -->
+  <rect x="180" y="430" width="10" height="40" fill="#3366cc" /> <!-- Brazo izquierdo -->
+  <rect x="210" y="430" width="10" height="40" fill="#3366cc" /> <!-- Brazo derecho -->
+  <rect x="190" y="490" width="8" height="30" fill="#333" /> <!-- Pierna izquierda -->
+  <rect x="202" y="490" width="8" height="30" fill="#333" /> <!-- Pierna derecha -->
+  <circle cx="190" cy="395" r="3" fill="#333" /> <!-- Ojo izquierdo -->
+  <circle cx="210" cy="395" r="3" fill="#333" /> <!-- Ojo derecho -->
+  <path d="M190,410 Q200,415 210,410" stroke="#333" stroke-width="2" fill="none" /> <!-- Sonrisa -->
+  <rect x="170" y="380" width="60" height="10" fill="#333" /> <!-- Pelo -->
+  <rect x="170" y="370" width="60" height="10" fill="#333" /> <!-- Pelo -->
+  <rect x="180" y="360" width="40" height="10" fill="#333" /> <!-- Pelo -->
+  
+  <!-- Estudiante 2 (centro) -->
+  <circle cx="400" cy="400" r="30" fill="#f2d6bd" /> <!-- Cabeza -->
+  <rect x="390" y="430" width="20" height="60" fill="#cc3366" /> <!-- Cuerpo -->
+  <rect x="380" y="430" width="10" height="40" fill="#cc3366" /> <!-- Brazo izquierdo -->
+  <rect x="410" y="430" width="10" height="40" fill="#cc3366" /> <!-- Brazo derecho -->
+  <rect x="390" y="490" width="8" height="30" fill="#333" /> <!-- Pierna izquierda -->
+  <rect x="402" y="490" width="8" height="30" fill="#333" /> <!-- Pierna derecha -->
+  <circle cx="390" cy="395" r="3" fill="#333" /> <!-- Ojo izquierdo -->
+  <circle cx="410" cy="395" r="3" fill="#333" /> <!-- Ojo derecho -->
+  <path d="M390,410 Q400,415 410,410" stroke="#333" stroke-width="2" fill="none" /> <!-- Sonrisa -->
+  <path d="M370,380 C380,360 420,360 430,380" stroke="#333" stroke-width="8" fill="none" /> <!-- Pelo -->
+  
+  <!-- Estudiante 3 (derecha) -->
+  <circle cx="600" cy="400" r="30" fill="#ffcc99" /> <!-- Cabeza -->
+  <rect x="590" y="430" width="20" height="60" fill="#339966" /> <!-- Cuerpo -->
+  <rect x="580" y="430" width="10" height="40" fill="#339966" /> <!-- Brazo izquierdo -->
+  <rect x="610" y="430" width="10" height="40" fill="#339966" /> <!-- Brazo derecho -->
+  <rect x="590" y="490" width="8" height="30" fill="#333" /> <!-- Pierna izquierda -->
+  <rect x="602" y="490" width="8" height="30" fill="#333" /> <!-- Pierna derecha -->
+  <circle cx="590" cy="395" r="3" fill="#333" /> <!-- Ojo izquierdo -->
+  <circle cx="610" cy="395" r="3" fill="#333" /> <!-- Ojo derecho -->
+  <path d="M590,410 Q600,415 610,410" stroke="#333" stroke-width="2" fill="none" /> <!-- Sonrisa -->
+  <rect x="580" y="370" width="40" height="20" fill="#333" /> <!-- Pelo -->
+  
+  <!-- Libros y mochilas -->
+  <rect x="230" y="450" width="20" height="25" fill="#ff6600" /> <!-- Libro estudiante 1 -->
+  <rect x="350" y="450" width="30" height="20" fill="#6600cc" /> <!-- Mochila estudiante 2 -->
+  <rect x="550" y="450" width="20" height="25" fill="#009933" /> <!-- Libro estudiante 3 -->
+  
+  <!-- Texto "ESTUDIANTES UTNC" -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#003366">ESTUDIANTES UTNC</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#003366">Formando el futuro</text>
+</svg>

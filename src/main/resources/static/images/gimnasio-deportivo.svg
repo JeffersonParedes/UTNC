@@ -1,0 +1,127 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="400" width="800" height="200" fill="#d4a574"/>
+  
+  <!-- Basketball court lines -->
+  <rect x="100" y="400" width="600" height="200" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="400" cy="500" r="60" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <line x1="400" y1="400" x2="400" y2="600" stroke="#ffffff" stroke-width="3"/>
+  
+  <!-- Basketball hoops -->
+  <rect x="90" y="450" width="20" height="3" fill="#ff6b35"/>
+  <rect x="85" y="453" width="30" height="15" fill="none" stroke="#ff6b35" stroke-width="2"/>
+  <rect x="690" y="450" width="20" height="3" fill="#ff6b35"/>
+  <rect x="685" y="453" width="30" height="15" fill="none" stroke="#ff6b35" stroke-width="2"/>
+  
+  <!-- Backboards -->
+  <rect x="80" y="430" width="5" height="40" fill="#6c757d"/>
+  <rect x="715" y="430" width="5" height="40" fill="#6c757d"/>
+  
+  <!-- Walls -->
+  <rect x="0" y="100" width="800" height="300" fill="#ffffff"/>
+  
+  <!-- Exercise equipment area -->
+  <rect x="50" y="200" width="200" height="150" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+  
+  <!-- Treadmills -->
+  <rect x="70" y="220" width="40" height="20" fill="#343a40"/>
+  <rect x="75" y="215" width="30" height="10" fill="#6c757d"/>
+  <rect x="120" y="220" width="40" height="20" fill="#343a40"/>
+  <rect x="125" y="215" width="30" height="10" fill="#6c757d"/>
+  
+  <!-- Weight machines -->
+  <rect x="70" y="280" width="30" height="40" fill="#6c757d"/>
+  <circle cx="85" cy="270" r="8" fill="#343a40"/>
+  <rect x="130" y="280" width="30" height="40" fill="#6c757d"/>
+  <circle cx="145" cy="270" r="8" fill="#343a40"/>
+  
+  <!-- Dumbbells -->
+  <g id="dumbbell1">
+    <rect x="180" y="300" width="20" height="3" fill="#343a40"/>
+    <circle cx="178" cy="301" r="4" fill="#6c757d"/>
+    <circle cx="202" cy="301" r="4" fill="#6c757d"/>
+  </g>
+  
+  <g id="dumbbell2">
+    <rect x="180" y="310" width="20" height="3" fill="#343a40"/>
+    <circle cx="178" cy="311" r="4" fill="#6c757d"/>
+    <circle cx="202" cy="311" r="4" fill="#6c757d"/>
+  </g>
+  
+  <!-- Students exercising -->
+  <g id="student_running">
+    <circle cx="90" cy="200" r="10" fill="#fdbcb4"/>
+    <rect x="87" y="208" width="6" height="15" fill="#007bff"/>
+    <rect x="88" y="220" width="4" height="12" fill="#343a40"/>
+    <!-- Running pose -->
+    <ellipse cx="85" cy="210" rx="3" ry="8" fill="#fdbcb4"/>
+    <ellipse cx="95" cy="212" rx="3" ry="8" fill="#fdbcb4"/>
+  </g>
+  
+  <g id="student_weights">
+    <circle cx="145" cy="260" r="10" fill="#f4c2a1"/>
+    <rect x="142" y="268" width="6" height="15" fill="#28a745"/>
+    <rect x="143" y="280" width="4" height="12" fill="#343a40"/>
+    <!-- Arms lifting -->
+    <ellipse cx="138" cy="265" rx="2" ry="6" fill="#f4c2a1"/>
+    <ellipse cx="152" cy="265" rx="2" ry="6" fill="#f4c2a1"/>
+  </g>
+  
+  <!-- Basketball players -->
+  <g id="player1">
+    <circle cx="350" cy="380" r="12" fill="#fdbcb4"/>
+    <rect x="346" y="390" width="8" height="20" fill="#dc3545"/>
+    <rect x="347" y="405" width="6" height="15" fill="#343a40"/>
+    <!-- Basketball -->
+    <circle cx="330" cy="375" r="8" fill="#ff6b35"/>
+    <path d="M 325 375 Q 330 370 335 375" stroke="#343a40" stroke-width="1" fill="none"/>
+    <path d="M 330 370 Q 335 375 330 380" stroke="#343a40" stroke-width="1" fill="none"/>
+  </g>
+  
+  <g id="player2">
+    <circle cx="450" cy="380" r="12" fill="#f4c2a1"/>
+    <rect x="446" y="390" width="8" height="20" fill="#007bff"/>
+    <rect x="447" y="405" width="6" height="15" fill="#343a40"/>
+    <!-- Defensive pose -->
+    <ellipse cx="440" cy="395" rx="3" ry="8" fill="#f4c2a1"/>
+    <ellipse cx="460" cy="395" rx="3" ry="8" fill="#f4c2a1"/>
+  </g>
+  
+  <!-- Bleachers -->
+  <rect x="550" y="200" width="200" height="150" fill="#adb5bd"/>
+  <line x1="550" y1="220" x2="750" y2="220" stroke="#6c757d" stroke-width="2"/>
+  <line x1="550" y1="240" x2="750" y2="240" stroke="#6c757d" stroke-width="2"/>
+  <line x1="550" y1="260" x2="750" y2="260" stroke="#6c757d" stroke-width="2"/>
+  <line x1="550" y1="280" x2="750" y2="280" stroke="#6c757d" stroke-width="2"/>
+  <line x1="550" y1="300" x2="750" y2="300" stroke="#6c757d" stroke-width="2"/>
+  <line x1="550" y1="320" x2="750" y2="320" stroke="#6c757d" stroke-width="2"/>
+  
+  <!-- Spectators on bleachers -->
+  <circle cx="580" cy="215" r="6" fill="#fdbcb4"/>
+  <circle cx="620" cy="235" r="6" fill="#f4c2a1"/>
+  <circle cx="680" cy="255" r="6" fill="#fdbcb4"/>
+  <circle cx="720" cy="275" r="6" fill="#f4c2a1"/>
+  
+  <!-- Ceiling lights -->
+  <ellipse cx="200" cy="120" rx="40" ry="15" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <ellipse cx="400" cy="120" rx="40" ry="15" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <ellipse cx="600" cy="120" rx="40" ry="15" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  
+  <!-- Scoreboard -->
+  <rect x="350" y="130" width="100" height="40" fill="#343a40"/>
+  <rect x="360" y="140" width="35" height="20" fill="#28a745"/>
+  <rect x="405" y="140" width="35" height="20" fill="#28a745"/>
+  <text x="377" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">HOME</text>
+  <text x="422" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">VISIT</text>
+  
+  <!-- Volleyball net (in background) -->
+  <line x1="300" y1="200" x2="300" y2="250" stroke="#6c757d" stroke-width="3"/>
+  <line x1="500" y1="200" x2="500" y2="250" stroke="#6c757d" stroke-width="3"/>
+  <rect x="300" y="220" width="200" height="30" fill="none" stroke="#6c757d" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#003366">GIMNASIO DEPORTIVO</text>
+</svg>

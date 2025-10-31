@@ -25,215 +25,96 @@
 
     <!-- Main Content -->
     <main class="container py-5">
-        <div class="text-center mb-5">
-            <h1 class="display-4">Nuestra Oferta Académica</h1>
-            <p class="lead">Explora las carreras que te prepararán para un futuro exitoso.</p>
+        <div class="text-center mb-4">
+            <h1 class="display-5">Explora nuestras carreras</h1>
+            <p class="lead">Selecciona una facultad y conoce sus programas.</p>
         </div>
 
-        <!-- Secciones de Carreras -->
+        
+
+        <!-- Secciones por Facultad (presentación con imagen + acordeones) -->
         <div id="ingenieria" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
             <div class="col-md-4">
-                <img src="image/ingenieria_moderna.svg" class="card-img-top rounded shadow" alt="Ingenierías">
+                <img src="/images/ingenieria_moderna.svg" class="card-img-top rounded shadow" alt="Ingenierías">
             </div>
             <div class="col-md-8">
                 <h2 class="text-primary">Ingenierías</h2>
-                <p>La facultad de ingenierías de la UTNC está a la vanguardia de la tecnología y la innovación. Ofrecemos programas como Ingeniería de Software, Ingeniería Civil e Ingeniería Industrial, diseñados para formar profesionales capaces de crear, diseñar y optimizar sistemas y soluciones que impulsen el progreso de la industria y la sociedad.</p>
+                <p>La facultad de ingenierías de la UTNC está a la vanguardia de la tecnología y la innovación. Ofrecemos programas como Ingeniería de Software, Ingeniería Civil y Arquitectura, diseñados para formar profesionales capaces de crear, diseñar y optimizar sistemas y soluciones que impulsen el progreso.</p>
                 <div class="accordion" id="accordionIngenieria">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngSoftware" aria-expanded="true" aria-controls="collapseIngSoftware">
-                                Ingeniería de Software
-                            </button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngSoftware" aria-expanded="true" aria-controls="collapseIngSoftware">Ingeniería de Software</button>
                         </h2>
                         <div id="collapseIngSoftware" class="accordion-collapse collapse show" data-bs-parent="#accordionIngenieria">
                             <div class="accordion-body">
                                 <p><strong>Duración:</strong> 10 semestres</p>
                                 <p><strong>Título:</strong> Ingeniero/a de Software</p>
-                                <p><strong>Descripción:</strong> Forma profesionales capaces de diseñar, desarrollar y mantener sistemas de software complejos, aplicando metodologías ágiles y las últimas tecnologías del mercado.</p>
-                                <p><strong>Campo laboral:</strong> Desarrollo de aplicaciones, gestión de proyectos tecnológicos, consultoría IT, startups tecnológicas.</p>
+                                <p><strong>Descripción:</strong> Diseña, desarrolla y mantiene sistemas de software complejos con metodologías ágiles.</p>
+                                <a href="/carreras/ingenieria-software" class="btn btn-outline-primary btn-sm">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngCivil" aria-expanded="false" aria-controls="collapseIngCivil">
-                                Ingeniería Civil
-                            </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngCivil" aria-expanded="false" aria-controls="collapseIngCivil">Ingeniería Civil</button>
                         </h2>
                         <div id="collapseIngCivil" class="accordion-collapse collapse" data-bs-parent="#accordionIngenieria">
                             <div class="accordion-body">
                                 <p><strong>Duración:</strong> 10 semestres</p>
                                 <p><strong>Título:</strong> Ingeniero/a Civil</p>
-                                <p><strong>Descripción:</strong> Prepara profesionales para diseñar, construir y supervisar infraestructuras sostenibles que mejoren la calidad de vida de las comunidades.</p>
-                                <p><strong>Campo laboral:</strong> Construcción, consultoría, gestión de proyectos, sector público y privado.</p>
+                                <p><strong>Descripción:</strong> Diseña y gestiona infraestructuras sostenibles para el desarrollo social.</p>
+                                <a href="/carreras/ingenieria-civil" class="btn btn-outline-primary btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArquitectura" aria-expanded="false" aria-controls="collapseArquitectura">Arquitectura</button>
+                        </h2>
+                        <div id="collapseArquitectura" class="accordion-collapse collapse" data-bs-parent="#accordionIngenieria">
+                            <div class="accordion-body">
+                                <p><strong>Duración:</strong> 10 semestres</p>
+                                <p><strong>Título:</strong> Arquitecto/a</p>
+                                <p><strong>Descripción:</strong> Diseña espacios innovadores, estéticos y funcionales.</p>
+                                <a href="/carreras/arquitectura" class="btn btn-outline-primary btn-sm">Ver más</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div id="salud" class="row align-items-center my-5 p-4 rounded shadow-sm">
-            <div class="col-md-8 order-md-2">
-                <h2 class="text-primary">Ciencias de la Salud</h2>
-                <p>Con un enfoque humanista y científico, nuestra facultad de Ciencias de la Salud prepara a los futuros profesionales para los desafíos del sector. A través de carreras como Enfermería, Obstetricia y Tecnología Médica, nuestros estudiantes adquieren conocimientos y práctica en entornos simulados y reales para garantizar el bienestar de la población.</p>
-                <div class="accordion" id="accordionSalud">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnfermeria" aria-expanded="true" aria-controls="collapseEnfermeria">
-                                Enfermería
-                            </button>
-                        </h2>
-                        <div id="collapseEnfermeria" class="accordion-collapse collapse show" data-bs-parent="#accordionSalud">
-                            <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Enfermería</p>
-                                <p><strong>Descripción:</strong> Forma profesionales con sólidos conocimientos científicos y humanísticos para brindar cuidados integrales de salud a personas, familias y comunidades.</p>
-                                <p><strong>Campo laboral:</strong> Hospitales, clínicas, centros de salud, docencia, investigación, gestión de servicios de salud.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutricion" aria-expanded="false" aria-controls="collapseNutricion">
-                                Nutrición y Dietética
-                            </button>
-                        </h2>
-                        <div id="collapseNutricion" class="accordion-collapse collapse" data-bs-parent="#accordionSalud">
-                            <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Nutrición y Dietética</p>
-                                <p><strong>Descripción:</strong> Prepara profesionales especializados en la ciencia de la alimentación y nutrición para promover hábitos saludables y prevenir enfermedades.</p>
-                                <p><strong>Campo laboral:</strong> Hospitales, consultorios, industria alimentaria, deporte, educación, salud pública.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 order-md-1">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Ciencias de la Salud">
-            </div>
-        </div>
-
-        <div id="sociales" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Ciencias Sociales">
-            </div>
-            <div class="col-md-8">
-                <h2 class="text-primary">Ciencias Sociales</h2>
-                <p>Nuestra facultad de Ciencias Sociales está comprometida con la formación de profesionales que comprendan y transformen la realidad social. Con carreras como Psicología, Sociología y Trabajo Social, preparamos a nuestros estudiantes para abordar los desafíos sociales contemporáneos con una perspectiva crítica y propositiva.</p>
-                <div class="accordion" id="accordionSociales">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePsicologia" aria-expanded="true" aria-controls="collapsePsicologia">
-                                Psicología
-                            </button>
-                        </h2>
-                        <div id="collapsePsicologia" class="accordion-collapse collapse show" data-bs-parent="#accordionSociales">
-                            <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Psicología</p>
-                                <p><strong>Descripción:</strong> Forma profesionales con capacidad para comprender, evaluar e intervenir en los procesos psicológicos humanos desde una perspectiva integral.</p>
-                                <p><strong>Campo laboral:</strong> Clínica, educación, organizaciones, comunitaria, investigación, docencia.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSociologia" aria-expanded="false" aria-controls="collapseSociologia">
-                                Sociología
-                            </button>
-                        </h2>
-                        <div id="collapseSociologia" class="accordion-collapse collapse" data-bs-parent="#accordionSociales">
-                            <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Sociología</p>
-                                <p><strong>Descripción:</strong> Desarrolla profesionales con capacidad para analizar fenómenos sociales y proponer soluciones a problemáticas contemporáneas.</p>
-                                <p><strong>Campo laboral:</strong> Investigación social, políticas públicas, ONG, consultoría, docencia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="derecho" class="row align-items-center my-5 p-4 rounded shadow-sm">
-            <div class="col-md-8 order-md-2">
-                <h2 class="text-primary">Derecho</h2>
-                <p>La facultad de Derecho de la UTNC forma profesionales con un sólido conocimiento jurídico y un fuerte compromiso ético. Nuestro programa de Derecho prepara a los estudiantes para enfrentar los desafíos legales contemporáneos, con un enfoque en la justicia social y el estado de derecho.</p>
-                <div class="accordion" id="accordionDerecho">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDerecho" aria-expanded="true" aria-controls="collapseDerecho">
-                                Derecho
-                            </button>
-                        </h2>
-                        <div id="collapseDerecho" class="accordion-collapse collapse show" data-bs-parent="#accordionDerecho">
-                            <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Abogado/a</p>
-                                <p><strong>Descripción:</strong> Forma profesionales con sólidos conocimientos jurídicos, capacidad de análisis crítico y compromiso con la justicia y los derechos humanos.</p>
-                                <p><strong>Campo laboral:</strong> Litigación, asesoría jurídica, sector público, empresas privadas, organizaciones internacionales.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCienciasPoliticas" aria-expanded="false" aria-controls="collapseCienciasPoliticas">
-                                Ciencias Políticas
-                            </button>
-                        </h2>
-                        <div id="collapseCienciasPoliticas" class="accordion-collapse collapse" data-bs-parent="#accordionDerecho">
-                            <div class="accordion-body">
-                                <p><strong>Duración:</strong> 8 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Ciencias Políticas</p>
-                                <p><strong>Descripción:</strong> Desarrolla profesionales con capacidad para analizar fenómenos políticos y participar en la gestión pública y privada.</p>
-                                <p><strong>Campo laboral:</strong> Administración pública, organismos internacionales, partidos políticos, consultoría, investigación.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 order-md-1">
-                <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Derecho">
             </div>
         </div>
 
         <div id="arte" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
             <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Arte y Diseño">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Arte y Diseño">
             </div>
             <div class="col-md-8">
                 <h2 class="text-primary">Arte y Diseño</h2>
-                <p>La facultad de Arte y Diseño de la UTNC fomenta la creatividad y la expresión artística a través de programas como Diseño Gráfico, Artes Visuales y Diseño de Interiores. Nuestros estudiantes desarrollan habilidades técnicas y conceptuales para destacarse en la industria creativa y contribuir al enriquecimiento cultural de la sociedad.</p>
+                <p>Fomentamos la creatividad y la expresión artística a través de programas como Diseño Gráfico y Artes Visuales. Desarrolla habilidades técnicas y conceptuales para destacarte en la industria creativa.</p>
                 <div class="accordion" id="accordionArte">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiseno" aria-expanded="true" aria-controls="collapseDiseno">
-                                Diseño Gráfico
-                            </button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiseno" aria-expanded="true" aria-controls="collapseDiseno">Diseño Gráfico</button>
                         </h2>
                         <div id="collapseDiseno" class="accordion-collapse collapse show" data-bs-parent="#accordionArte">
                             <div class="accordion-body">
                                 <p><strong>Duración:</strong> 8 semestres</p>
                                 <p><strong>Título:</strong> Licenciado/a en Diseño Gráfico</p>
-                                <p><strong>Descripción:</strong> Forma profesionales creativos capaces de comunicar visualmente ideas y conceptos a través de diversos medios y plataformas.</p>
-                                <p><strong>Campo laboral:</strong> Agencias de publicidad, estudios de diseño, departamentos creativos, freelance, editorial, medios digitales.</p>
+                                <p><strong>Descripción:</strong> Comunicación visual para resolver problemas mediante diseño.</p>
+                                <a href="/carreras/diseno-grafico" class="btn btn-outline-primary btn-sm">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArtes" aria-expanded="false" aria-controls="collapseArtes">
-                                Artes Visuales
-                            </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArtes" aria-expanded="false" aria-controls="collapseArtes">Artes Visuales</button>
                         </h2>
                         <div id="collapseArtes" class="accordion-collapse collapse" data-bs-parent="#accordionArte">
                             <div class="accordion-body">
                                 <p><strong>Duración:</strong> 8 semestres</p>
                                 <p><strong>Título:</strong> Licenciado/a en Artes Visuales</p>
-                                <p><strong>Descripción:</strong> Desarrolla artistas con dominio técnico y conceptual en diversas disciplinas como pintura, escultura, fotografía y nuevos medios.</p>
-                                <p><strong>Campo laboral:</strong> Producción artística, galerías, museos, gestión cultural, docencia, investigación.</p>
+                                <p><strong>Descripción:</strong> Formación artística con enfoque contemporáneo.</p>
+                                <a href="/carreras/artes-visuales" class="btn btn-outline-primary btn-sm">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -241,48 +122,94 @@
             </div>
         </div>
 
-        <div id="arquitectura" class="row align-items-center my-5 p-4 rounded shadow-sm">
-            <div class="col-md-8 order-md-2">
-                <h2 class="text-primary">Arquitectura</h2>
-                <p>La Facultad de Arquitectura de la UTNC forma profesionales con visión innovadora y sostenible, capaces de diseñar espacios que mejoren la calidad de vida de las personas y respeten el medio ambiente. Nuestros estudiantes desarrollan habilidades técnicas, artísticas y sociales para transformar el entorno construido.</p>
-                <div class="accordion" id="accordionArquitectura">
+        <div id="salud" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Ciencias de la Salud">
+            </div>
+            <div class="col-md-8">
+                <h2 class="text-primary">Ciencias de la Salud</h2>
+                <p>Con enfoque humanista y científico, preparamos a los futuros profesionales de Enfermería, Nutrición y Tecnología Médica, combinando teoría con práctica en entornos simulados y reales.</p>
+                <div class="accordion" id="accordionSalud">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArquitectura" aria-expanded="true" aria-controls="collapseArquitectura">
-                                Arquitectura
-                            </button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnfermeria" aria-expanded="true" aria-controls="collapseEnfermeria">Enfermería</button>
                         </h2>
-                        <div id="collapseArquitectura" class="accordion-collapse collapse show" data-bs-parent="#accordionArquitectura">
+                        <div id="collapseEnfermeria" class="accordion-collapse collapse show" data-bs-parent="#accordionSalud">
                             <div class="accordion-body">
                                 <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Arquitecto/a</p>
-                                <p><strong>Descripción:</strong> Forma profesionales capaces de diseñar, proyectar y construir espacios habitables que respondan a necesidades sociales, culturales y ambientales.</p>
-                                <p><strong>Campo laboral:</strong> Estudios de arquitectura, constructoras, sector público, consultoría, docencia, investigación.</p>
+                                <p><strong>Título:</strong> Licenciado/a en Enfermería</p>
+                                <p><strong>Descripción:</strong> Atención integral y humanizada de la salud.</p>
+                                <a href="/carreras/enfermeria" class="btn btn-outline-primary btn-sm">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUrbanismo" aria-expanded="false" aria-controls="collapseUrbanismo">
-                                Urbanismo
-                            </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutricion" aria-expanded="false" aria-controls="collapseNutricion">Nutrición y Dietética</button>
                         </h2>
-                        <div id="collapseUrbanismo" class="accordion-collapse collapse" data-bs-parent="#accordionArquitectura">
+                        <div id="collapseNutricion" class="accordion-collapse collapse" data-bs-parent="#accordionSalud">
                             <div class="accordion-body">
                                 <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Urbanismo</p>
-                                <p><strong>Descripción:</strong> Prepara profesionales especializados en la planificación y diseño de ciudades sostenibles, inclusivas y resilientes.</p>
-                                <p><strong>Campo laboral:</strong> Planificación urbana, administración pública, consultorías, ONG, investigación, docencia.</p>
+                                <p><strong>Título:</strong> Licenciado/a en Nutrición y Dietética</p>
+                                <p><strong>Descripción:</strong> Promoción de hábitos saludables y prevención de enfermedades.</p>
+                                <a href="/carreras/nutricion" class="btn btn-outline-primary btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTecMedica" aria-expanded="false" aria-controls="collapseTecMedica">Tecnología Médica</button>
+                        </h2>
+                        <div id="collapseTecMedica" class="accordion-collapse collapse" data-bs-parent="#accordionSalud">
+                            <div class="accordion-body">
+                                <p><strong>Duración:</strong> 10 semestres</p>
+                                <p><strong>Título:</strong> Licenciado/a en Tecnología Médica</p>
+                                <p><strong>Descripción:</strong> Diagnóstico y soporte clínico mediante tecnologías biomédicas.</p>
+                                <a href="/carreras/tecnologia-medica" class="btn btn-outline-primary btn-sm">Ver más</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 order-md-1">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Arquitectura">
-            </div>
         </div>
 
+        <div id="derecho" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Derecho">
+            </div>
+            <div class="col-md-8">
+                <h2 class="text-primary">Derecho</h2>
+                <p>Formamos profesionales con sólido conocimiento jurídico y fuerte compromiso ético. Nuestro programa aborda los desafíos legales contemporáneos con enfoque en justicia social y estado de derecho.</p>
+                <div class="accordion" id="accordionDerecho">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDerecho" aria-expanded="true" aria-controls="collapseDerecho">Derecho</button>
+                        </h2>
+                        <div id="collapseDerecho" class="accordion-collapse collapse show" data-bs-parent="#accordionDerecho">
+                            <div class="accordion-body">
+                                <p><strong>Duración:</strong> 10 semestres</p>
+                                <p><strong>Título:</strong> Abogado/a</p>
+                                <p><strong>Descripción:</strong> Formación jurídica con pensamiento crítico y compromiso social.</p>
+                                <a href="/carreras/derecho" class="btn btn-outline-primary btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCienciasPoliticas" aria-expanded="false" aria-controls="collapseCienciasPoliticas">Ciencias Políticas</button>
+                        </h2>
+                        <div id="collapseCienciasPoliticas" class="accordion-collapse collapse" data-bs-parent="#accordionDerecho">
+                            <div class="accordion-body">
+                                <p><strong>Duración:</strong> 8 semestres</p>
+                                <p><strong>Título:</strong> Licenciado/a en Ciencias Políticas</p>
+                                <p><strong>Descripción:</strong> Análisis político y gestión pública/privada.</p>
+                                <a href="/carreras/ciencias-politicas" class="btn btn-outline-primary btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->

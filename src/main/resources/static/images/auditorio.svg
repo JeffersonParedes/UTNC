@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Fondo con gradiente azul claro -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f0f0" />
+      <stop offset="100%" stop-color="#e0e0e0" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg-gradient)" />
+  
+  <!-- Paredes del auditorio -->
+  <rect x="50" y="100" width="700" height="300" fill="#f5f5f5" stroke="#666" stroke-width="2" />
+  
+  <!-- Techo del auditorio -->
+  <polygon points="50,100 400,50 750,100" fill="#d9d9d9" stroke="#666" stroke-width="2" />
+  
+  <!-- Escenario -->
+  <rect x="100" y="150" width="600" height="100" fill="#996633" stroke="#333" stroke-width="2" />
+  <rect x="100" y="250" width="600" height="20" fill="#663300" stroke="#333" stroke-width="1" />
+  
+  <!-- Cortinas del escenario -->
+  <path d="M100,150 Q150,180 100,210" fill="#cc0000" stroke="#990000" stroke-width="1" />
+  <path d="M700,150 Q650,180 700,210" fill="#cc0000" stroke="#990000" stroke-width="1" />
+  <rect x="100" y="150" width="600" height="10" fill="#990000" />
+  
+  <!-- Podio -->
+  <rect x="380" y="180" width="40" height="60" fill="#663300" stroke="#333" stroke-width="1" />
+  <rect x="375" y="180" width="50" height="10" fill="#996633" stroke="#333" stroke-width="1" />
+  <rect x="375" y="170" width="50" height="10" fill="#996633" stroke="#333" stroke-width="1" />
+  
+  <!-- Asientos del auditorio (filas) -->
+  <rect x="100" y="280" width="600" height="20" fill="#6699cc" stroke="#333" stroke-width="1" />
+  <rect x="100" y="310" width="600" height="20" fill="#6699cc" stroke="#333" stroke-width="1" />
+  <rect x="100" y="340" width="600" height="20" fill="#6699cc" stroke="#333" stroke-width="1" />
+  <rect x="100" y="370" width="600" height="20" fill="#6699cc" stroke="#333" stroke-width="1" />
+  
+  <!-- Divisiones de asientos -->
+  <line x1="200" y1="280" x2="200" y2="390" stroke="#333" stroke-width="1" />
+  <line x1="300" y1="280" x2="300" y2="390" stroke="#333" stroke-width="1" />
+  <line x1="400" y1="280" x2="400" y2="390" stroke="#333" stroke-width="1" />
+  <line x1="500" y1="280" x2="500" y2="390" stroke="#333" stroke-width="1" />
+  <line x1="600" y1="280" x2="600" y2="390" stroke="#333" stroke-width="1" />
+  
+  <!-- Luces del techo -->
+  <circle cx="200" cy="120" r="10" fill="#ffff99" stroke="#999" stroke-width="1" />
+  <circle cx="400" cy="120" r="10" fill="#ffff99" stroke="#999" stroke-width="1" />
+  <circle cx="600" cy="120" r="10" fill="#ffff99" stroke="#999" stroke-width="1" />
+  
+  <!-- Luces del escenario -->
+  <rect x="150" y="150" width="20" height="10" fill="#999" stroke="#666" stroke-width="1" />
+  <rect x="300" y="150" width="20" height="10" fill="#999" stroke="#666" stroke-width="1" />
+  <rect x="450" y="150" width="20" height="10" fill="#999" stroke="#666" stroke-width="1" />
+  <rect x="600" y="150" width="20" height="10" fill="#999" stroke="#666" stroke-width="1" />
+  
+  <!-- Persona en el podio -->
+  <circle cx="400" cy="160" r="10" fill="#ffcc99" /> <!-- Cabeza -->
+  <rect x="395" y="170" width="10" height="20" fill="#333333" /> <!-- Cuerpo -->
+  
+  <!-- Personas en los asientos (simplificadas) -->
+  <circle cx="150" cy="290" r="5" fill="#ffcc99" />
+  <circle cx="250" cy="290" r="5" fill="#ffcc99" />
+  <circle cx="350" cy="290" r="5" fill="#ffcc99" />
+  <circle cx="450" cy="290" r="5" fill="#ffcc99" />
+  <circle cx="550" cy="290" r="5" fill="#ffcc99" />
+  <circle cx="650" cy="290" r="5" fill="#ffcc99" />
+  
+  <circle cx="130" cy="320" r="5" fill="#ffcc99" />
+  <circle cx="230" cy="320" r="5" fill="#ffcc99" />
+  <circle cx="330" cy="320" r="5" fill="#ffcc99" />
+  <circle cx="430" cy="320" r="5" fill="#ffcc99" />
+  <circle cx="530" cy="320" r="5" fill="#ffcc99" />
+  <circle cx="630" cy="320" r="5" fill="#ffcc99" />
+  
+  <circle cx="170" cy="350" r="5" fill="#ffcc99" />
+  <circle cx="270" cy="350" r="5" fill="#ffcc99" />
+  <circle cx="370" cy="350" r="5" fill="#ffcc99" />
+  <circle cx="470" cy="350" r="5" fill="#ffcc99" />
+  <circle cx="570" cy="350" r="5" fill="#ffcc99" />
+  <circle cx="670" cy="350" r="5" fill="#ffcc99" />
+  
+  <circle cx="150" cy="380" r="5" fill="#ffcc99" />
+  <circle cx="250" cy="380" r="5" fill="#ffcc99" />
+  <circle cx="350" cy="380" r="5" fill="#ffcc99" />
+  <circle cx="450" cy="380" r="5" fill="#ffcc99" />
+  <circle cx="550" cy="380" r="5" fill="#ffcc99" />
+  <circle cx="650" cy="380" r="5" fill="#ffcc99" />
+  
+  <!-- Texto "AUDITORIO" -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#003366">AUDITORIO PRINCIPAL</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#003366">Universidad Tecnológica del Norte</text>
+</svg>

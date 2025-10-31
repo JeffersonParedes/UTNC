@@ -1,0 +1,104 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con gradiente azul tecnológico -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a8f" />
+      <stop offset="100%" stop-color="#0a1f4d" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="400" fill="url(#bg-gradient)" rx="10" ry="10" />
+  
+  <!-- Elementos de ingeniería y tecnología -->
+  <!-- Circuito electrónico de fondo -->
+  <g stroke="#4a90e2" stroke-width="1.5" fill="none" opacity="0.15">
+    <path d="M50,50 L150,50 L150,100 L250,100 L250,150 L350,150 L350,200 L450,200 L450,250 L550,250" />
+    <path d="M50,100 L100,100 L100,200 L200,200 L200,300 L300,300 L300,350 L400,350" />
+    <path d="M150,50 C200,50 200,150 250,150" />
+    <path d="M250,100 C300,100 300,200 350,200" />
+    <path d="M350,150 C400,150 400,250 450,250" />
+    <circle cx="150" cy="50" r="5" fill="#4a90e2" />
+    <circle cx="250" cy="100" r="5" fill="#4a90e2" />
+    <circle cx="250" cy="150" r="5" fill="#4a90e2" />
+    <circle cx="350" cy="150" r="5" fill="#4a90e2" />
+    <circle cx="350" cy="200" r="5" fill="#4a90e2" />
+    <circle cx="450" cy="200" r="5" fill="#4a90e2" />
+    <circle cx="450" cy="250" r="5" fill="#4a90e2" />
+    <circle cx="100" cy="100" r="5" fill="#4a90e2" />
+    <circle cx="100" cy="200" r="5" fill="#4a90e2" />
+    <circle cx="200" cy="200" r="5" fill="#4a90e2" />
+    <circle cx="200" cy="300" r="5" fill="#4a90e2" />
+    <circle cx="300" cy="300" r="5" fill="#4a90e2" />
+    <circle cx="300" cy="350" r="5" fill="#4a90e2" />
+  </g>
+  
+  <!-- Elementos centrales -->
+  <!-- Edificio/Campus universitario estilizado -->
+  <g transform="translate(150, 100)">
+    <rect x="0" y="50" width="300" height="150" fill="#ffffff" opacity="0.9" rx="5" ry="5" />
+    <rect x="30" y="80" width="60" height="90" fill="#0a1f4d" opacity="0.8" />
+    <rect x="120" y="80" width="60" height="90" fill="#0a1f4d" opacity="0.8" />
+    <rect x="210" y="80" width="60" height="90" fill="#0a1f4d" opacity="0.8" />
+    <rect x="0" y="30" width="300" height="20" fill="#ffffff" opacity="0.7" />
+    <polygon points="0,30 300,30 250,0 50,0" fill="#ffffff" opacity="0.8" />
+  </g>
+  
+  <!-- Elementos de ingeniería -->
+  <!-- Engranaje grande -->
+  <g transform="translate(450, 100)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#ffffff" stroke-width="3" />
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="0" cy="0" r="5" fill="#ffffff" />
+    <!-- Dientes del engranaje -->
+    <g stroke="#ffffff" stroke-width="3">
+      <line x1="0" y1="-40" x2="0" y2="-50" />
+      <line x1="28" y1="-28" x2="35" y2="-35" />
+      <line x1="40" y1="0" x2="50" y2="0" />
+      <line x1="28" y1="28" x2="35" y2="35" />
+      <line x1="0" y1="40" x2="0" y2="50" />
+      <line x1="-28" y1="28" x2="-35" y2="35" />
+      <line x1="-40" y1="0" x2="-50" y2="0" />
+      <line x1="-28" y1="-28" x2="-35" y2="-35" />
+    </g>
+  </g>
+  
+  <!-- Engranaje pequeño -->
+  <g transform="translate(380, 100)">
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#ffffff" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    <!-- Dientes del engranaje -->
+    <g stroke="#ffffff" stroke-width="2">
+      <line x1="0" y1="-25" x2="0" y2="-30" />
+      <line x1="18" y1="-18" x2="21" y2="-21" />
+      <line x1="25" y1="0" x2="30" y2="0" />
+      <line x1="18" y1="18" x2="21" y2="21" />
+      <line x1="0" y1="25" x2="0" y2="30" />
+      <line x1="-18" y1="18" x2="-21" y2="21" />
+      <line x1="-25" y1="0" x2="-30" y2="0" />
+      <line x1="-18" y1="-18" x2="-21" y2="-21" />
+    </g>
+  </g>
+  
+  <!-- Estudiantes estilizados -->
+  <g transform="translate(100, 200)">
+    <!-- Estudiante 1 -->
+    <circle cx="0" cy="0" r="15" fill="#ffffff" opacity="0.9" />
+    <rect x="-10" y="15" width="20" height="30" fill="#ffffff" opacity="0.9" rx="5" ry="5" />
+    <!-- Computadora portátil -->
+    <rect x="-15" y="50" width="30" height="20" fill="#4a90e2" opacity="0.9" rx="2" ry="2" />
+    <rect x="-12" y="53" width="24" height="14" fill="#ffffff" opacity="0.7" rx="1" ry="1" />
+  </g>
+  
+  <g transform="translate(300, 220)">
+    <!-- Estudiante 2 -->
+    <circle cx="0" cy="0" r="15" fill="#ffffff" opacity="0.9" />
+    <rect x="-10" y="15" width="20" height="30" fill="#ffffff" opacity="0.9" rx="5" ry="5" />
+    <!-- Tableta/dispositivo -->
+    <rect x="-12" y="50" width="24" height="15" fill="#4a90e2" opacity="0.9" rx="2" ry="2" />
+  </g>
+  
+  <!-- Texto: Ingeniería -->
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">INGENIERÍA</text>
+  <text x="300" y="380" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Innovación y Tecnología</text>
+</svg>

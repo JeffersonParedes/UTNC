@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Biblioteca">
+                        <img th:src="@{/images/biblioteca-moderna.svg}" class="card-img-top" alt="Biblioteca">
                         <div class="card-body">
                             <h5 class="card-title">Biblioteca Moderna</h5>
                             <p class="card-text">Accede a una vasta colección de recursos físicos y digitales para potenciar tu investigación y estudio.</p>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Laboratorios">
+                        <img th:src="@{/images/laboratorio-equipado.svg}" class="card-img-top" alt="Laboratorios">
                         <div class="card-body">
                             <h5 class="card-title">Laboratorios Equipados</h5>
                             <p class="card-text">Pon en práctica tus conocimientos con tecnología de punta en nuestros laboratorios especializados.</p>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Áreas Deportivas">
+                        <img th:src="@{/images/gimnasio-deportivo.svg}" class="card-img-top" alt="Áreas Deportivas">
                         <div class="card-body">
                             <h5 class="card-title">Áreas Deportivas</h5>
                             <p class="card-text">Fomenta un estilo de vida saludable en nuestras canchas de fútbol, baloncesto y gimnasio.</p>
@@ -99,27 +99,32 @@
             <div class="row g-3">
                 <div class="col-md-4 mb-3">
                     <div class="gallery-item" style="height: 250px; overflow: hidden;">
-                        <img src="image/campus_principal.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Campus principal">
+                        <img th:src="@{/images/campus_principal.svg}" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Campus principal">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="gallery-item" style="height: 250px; overflow: hidden;">
-                        <img src="image/estudiantes_campus.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Estudiantes en el campus">
+                        <img th:src="@{/images/estudiantes_campus.svg}" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Estudiantes en el campus">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="gallery-item" style="height: 250px; overflow: hidden;">
-                        <img src="image/auditorio.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Auditorio">
+                        <img th:src="@{/images/aula-moderna.svg}" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Aula moderna">
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="gallery-item" style="height: 300px; overflow: hidden;">
-                        <img src="image/cafeteria.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Cafetería">
+                        <img th:src="@{/images/auditorio.svg}" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Auditorio">
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="gallery-item" style="height: 300px; overflow: hidden;">
-                        <img src="image/areas_verdes.svg" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Áreas verdes">
+                        <img th:src="@{/images/cafeteria.svg}" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Cafetería">
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="gallery-item" style="height: 350px; overflow: hidden;">
+                        <img th:src="@{/images/areas_verdes.svg}" class="img-fluid rounded shadow w-100 h-100" style="object-fit: cover;" alt="Áreas verdes">
                     </div>
                 </div>
             </div>

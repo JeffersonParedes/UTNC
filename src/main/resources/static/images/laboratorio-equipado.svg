@@ -1,0 +1,113 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#e9ecef"/>
+  
+  <!-- Back wall -->
+  <rect x="0" y="100" width="800" height="350" fill="#ffffff"/>
+  
+  <!-- Lab benches -->
+  <rect x="100" y="300" width="200" height="60" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  <rect x="400" y="300" width="200" height="60" fill="#d4a574" stroke="#8b4513" stroke-width="2"/>
+  
+  <!-- Lab bench legs -->
+  <rect x="120" y="360" width="8" height="40" fill="#8b4513"/>
+  <rect x="280" y="360" width="8" height="40" fill="#8b4513"/>
+  <rect x="420" y="360" width="8" height="40" fill="#8b4513"/>
+  <rect x="580" y="360" width="8" height="40" fill="#8b4513"/>
+  
+  <!-- Microscopes -->
+  <g id="microscope1">
+    <rect x="150" y="280" width="20" height="20" fill="#343a40"/>
+    <circle cx="160" cy="270" r="8" fill="#6c757d"/>
+    <rect x="157" y="250" width="6" height="20" fill="#343a40"/>
+    <circle cx="160" cy="245" r="5" fill="#007bff"/>
+  </g>
+  
+  <g id="microscope2">
+    <rect x="450" y="280" width="20" height="20" fill="#343a40"/>
+    <circle cx="460" cy="270" r="8" fill="#6c757d"/>
+    <rect x="457" y="250" width="6" height="20" fill="#343a40"/>
+    <circle cx="460" cy="245" r="5" fill="#007bff"/>
+  </g>
+  
+  <!-- Beakers and test tubes -->
+  <g id="beaker1">
+    <rect x="200" y="285" width="15" height="15" fill="none" stroke="#28a745" stroke-width="2"/>
+    <rect x="202" y="287" width="11" height="8" fill="#28a745" opacity="0.3"/>
+  </g>
+  
+  <g id="beaker2">
+    <rect x="220" y="285" width="15" height="15" fill="none" stroke="#dc3545" stroke-width="2"/>
+    <rect x="222" y="287" width="11" height="10" fill="#dc3545" opacity="0.3"/>
+  </g>
+  
+  <g id="test_tubes">
+    <rect x="500" y="285" width="3" height="15" fill="#007bff"/>
+    <rect x="505" y="285" width="3" height="15" fill="#28a745"/>
+    <rect x="510" y="285" width="3" height="15" fill="#dc3545"/>
+    <rect x="515" y="285" width="3" height="15" fill="#ffc107"/>
+  </g>
+  
+  <!-- Bunsen burner -->
+  <rect x="250" y="290" width="8" height="10" fill="#343a40"/>
+  <ellipse cx="254" cy="285" rx="3" ry="2" fill="#ffc107"/>
+  <path d="M 252 283 Q 254 280 256 283" stroke="#ff6b35" stroke-width="2" fill="none"/>
+  
+  <!-- Computer/monitor -->
+  <rect x="520" y="270" width="40" height="30" fill="#343a40"/>
+  <rect x="525" y="275" width="30" height="20" fill="#007bff"/>
+  <rect x="537" y="300" width="6" height="8" fill="#6c757d"/>
+  
+  <!-- Students in lab coats -->
+  <g id="student1">
+    <circle cx="180" cy="250" r="12" fill="#fdbcb4"/>
+    <rect x="175" y="260" width="10" height="25" fill="#ffffff"/>
+    <rect x="177" y="280" width="6" height="20" fill="#343a40"/>
+    <!-- Safety goggles -->
+    <ellipse cx="180" cy="248" rx="8" ry="4" fill="none" stroke="#007bff" stroke-width="2"/>
+  </g>
+  
+  <g id="student2">
+    <circle cx="480" cy="250" r="12" fill="#f4c2a1"/>
+    <rect x="475" y="260" width="10" height="25" fill="#ffffff"/>
+    <rect x="477" y="280" width="6" height="20" fill="#343a40"/>
+    <!-- Safety goggles -->
+    <ellipse cx="480" cy="248" rx="8" ry="4" fill="none" stroke="#007bff" stroke-width="2"/>
+  </g>
+  
+  <!-- Overhead cabinets -->
+  <rect x="50" y="150" width="150" height="40" fill="#6c757d" stroke="#343a40" stroke-width="2"/>
+  <rect x="250" y="150" width="150" height="40" fill="#6c757d" stroke="#343a40" stroke-width="2"/>
+  <rect x="450" y="150" width="150" height="40" fill="#6c757d" stroke="#343a40" stroke-width="2"/>
+  <rect x="650" y="150" width="100" height="40" fill="#6c757d" stroke="#343a40" stroke-width="2"/>
+  
+  <!-- Cabinet handles -->
+  <circle cx="190" cy="170" r="3" fill="#343a40"/>
+  <circle cx="390" cy="170" r="3" fill="#343a40"/>
+  <circle cx="590" cy="170" r="3" fill="#343a40"/>
+  <circle cx="740" cy="170" r="3" fill="#343a40"/>
+  
+  <!-- Ceiling lights -->
+  <ellipse cx="200" cy="120" rx="40" ry="15" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <ellipse cx="500" cy="120" rx="40" ry="15" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  
+  <!-- Fume hood -->
+  <rect x="650" y="200" width="120" height="150" fill="#e9ecef" stroke="#6c757d" stroke-width="2"/>
+  <rect x="660" y="210" width="100" height="100" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="665" y="320" width="90" height="20" fill="#343a40"/>
+  
+  <!-- Safety shower -->
+  <rect x="50" y="200" width="15" height="80" fill="#28a745"/>
+  <circle cx="57" cy="190" r="8" fill="#28a745"/>
+  <rect x="52" y="185" width="10" height="3" fill="#ffffff"/>
+  
+  <!-- Fire extinguisher -->
+  <rect x="750" y="250" width="20" height="50" fill="#dc3545"/>
+  <rect x="755" y="240" width="10" height="10" fill="#343a40"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#003366">LABORATORIO EQUIPADO</text>
+</svg>
