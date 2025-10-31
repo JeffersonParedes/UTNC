@@ -40,4 +40,9 @@ public class HomeController {
     public String servicios() {
         return "servicios/servicios"; // templates/servicios/servicios.html
     }
+
+    @GetMapping("/admision/inscripcion")
+    public String admisionInscripcion() {
+        return "admision/inscripcion";
+    }
 }

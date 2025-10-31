@@ -132,4 +132,53 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  });
+
+    // Multi-step form logic for inscription page
+    const inscriptionForm = document.getElementById('inscription-form');
+    if (inscriptionForm) {
+        let currentStep = 1;
+        const steps = inscriptionForm.querySelectorAll('.form-step');
+        const stepperIcons = document.querySelectorAll('#stepper .step');
+        const nextBtn = inscriptionForm.querySelector('#next-btn');
+        const prevBtn = inscriptionForm.querySelector('#prev-btn');
+        const submitBtn = inscriptionForm.querySelector('#submit-btn');
+
+        const showStep = (stepNumber) => {
+            steps.forEach(step => {
+                step.classList.toggle('active', parseInt(step.dataset.step) === stepNumber);
+            });
+
+            stepperIcons.forEach(stepIcon => {
+                const iconStep = parseInt(stepIcon.dataset.step);
+                if (iconStep < stepNumber) {
+                    stepIcon.classList.add('completed');
+                    stepIcon.classList.remove('active');
+                } else {
+                    stepIcon.classList.toggle('active', iconStep === stepNumber);
+                    stepIcon.classList.remove('completed');
+                }
+            });
+
+            prevBtn.disabled = stepNumber === 1;
+            nextBtn.classList.toggle('d-none', stepNumber === steps.length);
+            submitBtn.classList.toggle('d-none', stepNumber !== steps.length);
+        };
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < steps.length) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        });
+
+        // Initially show the first step
+        showStep(currentStep);
+    }
+});
