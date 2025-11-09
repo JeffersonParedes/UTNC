@@ -1,0 +1,39 @@
+<!-- fragments/footerportal.html -->
+<footer class="bg-dark text-white pt-4 pb-3 mt-5" th:fragment="footerportal">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5 class="text-uppercase mb-3 fw-bold text-primary">UTNC</h5>
+                <p class="small">Portal Estudiantil - Sistema de Gestión Académica</p>
+                <p class="small mb-0">Comprometidos con la formación de profesionales íntegros.</p>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5 class="text-uppercase mb-3 fw-bold text-primary">Enlaces Rápidos</h5>
+                <ul class="list-unstyled small">
+                    <li><a th:href="@{/portal/estudiante}" class="text-white text-decoration-none">Inicio</a></li>
+                    <li><a th:href="@{/portal/estudiante/cursos}" class="text-white text-decoration-none">Cursos</a></li>
+                    <li><a th:href="@{/portal/estudiante/horario}" class="text-white text-decoration-none">Horario</a></li>
+                    <li><a th:href="@{/portal/estudiante/pagos}" class="text-white text-decoration-none">Pagos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3 fw-bold text-primary">Soporte</h5>
+                <ul class="list-unstyled small">
+                    <li><i class="bi bi-envelope me-2"></i> soporte@utnc.edu.pe</li>
+                    <li><i class="bi bi-telephone me-2"></i> +51 962 515 600</li>
+                    <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-3">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <p class="small mb-0">© 2024 Universidad Tecnológica de Nuevo Chimbote. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="/" class="text-white text-decoration-none small">Volver al sitio web</a>
+            </div>
+        </div>
+    </div>
+</footer>
+

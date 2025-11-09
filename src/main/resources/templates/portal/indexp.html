@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Estudiantil - UTNC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <style>
+        .hero-portal {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('/images/campus_principal.svg') center/cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-portal text-white text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Portal Estudiantil UTNC</h1>
+                    <p class="lead mb-4">Gestiona tu vida académica de manera sencilla y eficiente. Accede a tus cursos, horarios y pagos desde un solo lugar.</p>
+                    <a th:href="@{/portal/acceso/login}" class="btn btn-light btn-lg px-5">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Principales -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Funcionalidades Principales</h2>
+                <p class="lead text-muted">Todo lo que necesitas para tu gestión académica en un solo lugar</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Gestión de Cursos -->
+                <div class="col-md-4">
+                    <div class="card feature-card shadow-sm border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-book-fill text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Gestión de Cursos</h4>
+                            <p class="card-text text-muted">Consulta tus cursos matriculados, docentes, créditos y aulas asignadas. Mantén un registro completo de tu progreso académico.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horarios -->
+                <div class="col-md-4">
+                    <div class="card feature-card shadow-sm border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-calendar-week-fill text-success" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Horarios</h4>
+                            <p class="card-text text-muted">Visualiza tu horario semanal de forma clara y organizada. Generado automáticamente según tus cursos matriculados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagos -->
+                <div class="col-md-4">
+                    <div class="card feature-card shadow-sm border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-credit-card-fill text-warning" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Pagos</h4>
+                            <p class="card-text text-muted">Consulta el estado de tus pagos, cuotas pendientes y realiza pagos de manera segura y rápida desde el portal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulos Detallados -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Módulos del Sistema</h2>
+                <p class="lead text-muted">Conoce más sobre cada funcionalidad</p>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-primary text-white">
+                                <i class="bi bi-book" style="font-size: 4rem;"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Cursos Matriculados</h5>
+                                    <p class="card-text small">Accede a la lista completa de tus cursos con información detallada: nombre del curso, docente asignado, número de créditos y aula donde se imparte.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-success text-white">
+                                <i class="bi bi-calendar-week" style="font-size: 4rem;"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Horario Semanal</h5>
+                                    <p class="card-text small">Visualiza tu horario de clases organizado por días de la semana. El sistema genera automáticamente tu horario según los cursos en los que estás matriculado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-warning text-white">
+                                <i class="bi bi-credit-card" style="font-size: 4rem;"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Estado de Pagos</h5>
+                                    <p class="card-text small">Consulta el estado de tus pagos: monto total, cuotas pagadas y pendientes. Realiza pagos de forma segura o simula diferentes escenarios de pago.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-info text-white">
+                                <i class="bi bi-shield-check" style="font-size: 4rem;"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Acceso Seguro</h5>
+                                    <p class="card-text small">Tu información está protegida con sistemas de seguridad avanzados. Si olvidaste tu contraseña, puedes recuperarla fácilmente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-3">¿Listo para comenzar?</h2>
+            <p class="lead mb-4">Inicia sesión en tu portal estudiantil y gestiona tu vida académica</p>
+            <a th:href="@{/portal/acceso/login}" class="btn btn-light btn-lg px-5">
+                <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+            </a>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
+</body>
+</html>
+
