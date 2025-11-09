@@ -21,7 +21,7 @@ public class ContactoServiceImpl implements ContactoService {
     public void procesarMensaje(ContactoDTO dto) {
 
         // --- LÓGICA DE BASE DE DATOS DESACTIVADA TEMPORALMENTE ---
-        /*
+        
         Contacto contacto = new Contacto();
         contacto.setName(dto.getName());
         contacto.setEmail(dto.getEmail());
@@ -31,7 +31,7 @@ public class ContactoServiceImpl implements ContactoService {
         contacto.setMensaje(dto.getMessage());
 
         contactoRepository.save(contacto);
-        */
+        
 
         // Simulación: Imprimir los datos en la consola.
         // En un futuro, aquí también podría ir la lógica para enviar un email.
