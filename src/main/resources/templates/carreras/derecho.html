@@ -1,87 +1,239 @@
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derecho - UTNC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" th:href="@{/css/styles.css}">
-    <style>body{padding-top:0!important}</style>
+    <style>
+        body { padding-top: 76px !important; }
+        .career-header {
+            background: linear-gradient(135deg, rgba(25, 25, 112, 0.9), rgba(70, 130, 180, 0.8)), 
+                        url('/images/auditorio.svg') center/cover;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .info-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .info-card:hover {
+            transform: translateX(5px);
+            border-left-color: #191970;
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
 </head>
 <body>
-    <header class="text-white" style="background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('/images/auditorio.svg') center/cover;">
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <header class="career-header text-white">
         <div class="container py-5">
-            <h1 class="display-5 mb-1">Derecho</h1>
-            <p class="lead mb-0">Justicia, ética y servicio a la sociedad.</p>
+            <div class="animate-fade-in">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-gavel me-3" style="font-size: 3.5rem; opacity: 0.9;"></i>
+                    <div>
+                        <h1 class="display-4 fw-bold mb-2">Derecho</h1>
+                        <p class="lead mb-0 fs-5">Justicia, ética y servicio a la sociedad</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <section class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1 class="mb-3">Derecho</h1>
-                <p>Forma abogados con sólidos conocimientos jurídicos, pensamiento crítico y compromiso con la justicia y los derechos humanos.</p>
-                <ul class="list-unstyled">
-                    <li><strong>Duración:</strong> 10 semestres</li>
-                    <li><strong>Título:</strong> Abogado/a</li>
-                    <li><strong>Campo laboral:</strong> Litigación, asesoría jurídica, sector público y privado.</li>
-                </ul>
-                <a href="/admision" class="btn btn-primary">Postular</a>
+        <div class="row align-items-center g-4">
+            <div class="col-md-6 animate-slide-left">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-balance-scale-fill text-primary me-3" style="font-size: 2.5rem;"></i>
+                    <h2 class="fw-bold mb-0">Sobre la Carrera</h2>
+                </div>
+                <p class="lead text-muted mb-4">Forma abogados con sólidos conocimientos jurídicos, pensamiento crítico y compromiso con la justicia y los derechos humanos.</p>
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-clock-history text-primary me-2"></i>
+                            <div>
+                                <strong>Duración:</strong><br>
+                                <span class="text-muted">10 semestres</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-award text-primary me-2"></i>
+                            <div>
+                                <strong>Título:</strong><br>
+                                <span class="text-muted">Abogado/a</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-start mb-2">
+                            <i class="bi bi-briefcase text-primary me-2 mt-1"></i>
+                            <div>
+                                <strong>Campo laboral:</strong><br>
+                                <span class="text-muted">Litigación, asesoría jurídica, sector público y privado.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a th:href="@{/admision}" class="btn btn-primary btn-lg shadow-lg">
+                    <i class="bi bi-file-earmark-text me-2"></i>Postular Ahora
+                </a>
             </div>
-            <div class="col-md-6">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Ud3z7e66QxE" title="Derecho" allowfullscreen></iframe>
+            <div class="col-md-6 animate-slide-right">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/Ud3z7e66QxE" title="Derecho" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="container pb-5">
-        <div class="row g-4">
+        <div class="row g-4 mb-4">
             <div class="col-md-6">
-                <div class="card h-100"><div class="card-body">
-                    <h5 class="card-title">¿Por qué estudiar esta carrera?</h5>
-                    <ul class="mb-0">
-                        <li>Formación integral con enfoque en derechos humanos.</li>
-                        <li>Amplias salidas en sectores público y privado.</li>
-                        <li>Desarrollo de habilidades de argumentación y análisis.</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100"><div class="card-body">
-                    <h5 class="card-title">Perfil del egresado</h5>
-                    <ul class="mb-0">
-                        <li>Dominio de normativa nacional e internacional.</li>
-                        <li>Ética profesional y responsabilidad social.</li>
-                        <li>Capacidad de litigación, mediación y asesoría.</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="col-md-12">
-                <div class="card"><div class="card-body">
-                    <h5 class="card-title">Plan de estudios (resumen)</h5>
-                    <div class="row">
-                        <div class="col-md-6"><ul>
-                            <li>Introducción al Derecho</li>
-                            <li>Derecho Constitucional</li>
-                            <li>Derecho Civil</li>
-                            <li>Derecho Penal</li>
-                            <li>Derecho Administrativo</li>
-                        </ul></div>
-                        <div class="col-md-6"><ul>
-                            <li>Derecho Laboral</li>
-                            <li>Derecho Internacional</li>
-                            <li>Métodos Alternativos de Solución de Conflictos</li>
-                            <li>Clínicas Jurídicas</li>
-                            <li>Seminario de Tesis</li>
-                        </ul></div>
+                <div class="card h-100 info-card shadow-sm border-0 animate-scale-in">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-question-circle-fill text-primary me-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title fw-bold mb-0">¿Por qué estudiar esta carrera?</h5>
+                        </div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Formación integral con enfoque en derechos humanos
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Amplias salidas en sectores público y privado
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Desarrollo de habilidades de argumentación y análisis
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Impacto directo en la justicia y la sociedad
+                            </li>
+                        </ul>
                     </div>
-                    <a href="/admision" class="btn btn-outline-primary">Postula ahora</a>
-                </div></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 info-card shadow-sm border-0 animate-scale-in" style="animation-delay: 0.1s;">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-person-badge text-primary me-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title fw-bold mb-0">Perfil del Egresado</h5>
+                        </div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="bi bi-gear-fill text-primary me-2"></i>
+                                Dominio de normativa nacional e internacional
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-gear-fill text-primary me-2"></i>
+                                Ética profesional y responsabilidad social
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-gear-fill text-primary me-2"></i>
+                                Capacidad de litigación, mediación y asesoría
+                            </li>
+                            <li>
+                                <i class="bi bi-gear-fill text-primary me-2"></i>
+                                Pensamiento crítico y análisis jurídico
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-lg border-0 animate-scale-in" style="animation-delay: 0.2s;">
+            <div class="card-header bg-primary text-white">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-book-fill me-3" style="font-size: 1.5rem;"></i>
+                    <h5 class="card-title fw-bold mb-0">Plan de Estudios</h5>
+                </div>
+            </div>
+            <div class="card-body p-4">
+                <p class="text-muted mb-4">Nuestro plan de estudios está diseñado para formar profesionales integrales con conocimientos teóricos y prácticos en las áreas más demandadas del derecho.</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-1-circle-fill me-2"></i>Ciclo Básico (Semestres 1-4)
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-book text-primary me-2"></i>
+                                Introducción al Derecho
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-shield-check text-primary me-2"></i>
+                                Derecho Constitucional
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-people text-primary me-2"></i>
+                                Derecho Civil
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-shield-exclamation text-primary me-2"></i>
+                                Derecho Penal
+                            </li>
+                            <li>
+                                <i class="bi bi-building text-primary me-2"></i>
+                                Derecho Administrativo
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-2-circle-fill me-2"></i>Ciclo Avanzado (Semestres 5-10)
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-briefcase text-primary me-2"></i>
+                                Derecho Laboral
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-globe text-primary me-2"></i>
+                                Derecho Internacional
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-handshake text-primary me-2"></i>
+                                Métodos Alternativos de Solución de Conflictos
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-hospital text-primary me-2"></i>
+                                Clínicas Jurídicas
+                            </li>
+                            <li>
+                                <i class="bi bi-rocket-takeoff text-primary me-2"></i>
+                                Seminario de Tesis
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a th:href="@{/admision}" class="btn btn-primary btn-lg shadow-lg">
+                        <i class="bi bi-file-earmark-text me-2"></i>Postula Ahora
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <div th:replace="fragments/footer :: footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
 </body>
 </html>

@@ -1,37 +1,93 @@
 <!-- fragments/footer.html -->
 <footer class="bg-dark text-white pt-5 pb-4 mt-5" th:fragment="footer">
     <div class="container text-center text-md-start">
-        <div class="row text-center text-md-start">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
-                <p>Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
+        <div class="row text-center text-md-start g-4">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-mortarboard-fill text-primary me-2" style="font-size: 2rem;"></i>
+                    <h5 class="text-uppercase mb-0 fw-bold text-primary">UTNC</h5>
+                </div>
+                <p class="small">Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
             </div>
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
-                <p><a th:href="@{/nosotros}" class="text-white" style="text-decoration: none;">Nosotros</a></p>
-                <p><a th:href="@{/carreras}" class="text-white" style="text-decoration: none;">Carreras</a></p>
-                <p><a th:href="@{/admision}" class="text-white" style="text-decoration: none;">Admisión</a></p>
-                <p><a th:href="@{/campus}" class="text-white" style="text-decoration: none;">Campus</a></p>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">
+                    <i class="bi bi-link-45deg me-2"></i>Enlaces
+                </h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a th:href="@{/nosotros}" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="bi bi-people me-2"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a th:href="@{/carreras}" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="bi bi-book me-2"></i>Carreras
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a th:href="@{/admision}" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="bi bi-file-earmark-text me-2"></i>Admisión
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a th:href="@{/campus}" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="bi bi-building me-2"></i>Campus
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
-                <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Pacífico, Chimbote 02711, Perú</p>
-                <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
-                <p><i class="bi bi-telephone-fill me-3"></i> +51 962 515 600</p>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">
+                    <i class="bi bi-telephone me-2"></i>Contacto
+                </h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-geo-alt-fill text-primary me-3 mt-1"></i>
+                        <span class="small">Av. Pacífico, Chimbote 02711, Perú</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-envelope-fill text-primary me-3"></i>
+                        <a href="mailto:info@utnc.edu.pe" class="text-white text-decoration-none small">info@utnc.edu.pe</a>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-telephone-fill text-primary me-3"></i>
+                        <a href="tel:+51962515600" class="text-white text-decoration-none small">+51 962 515 600</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <hr class="mb-4">
+        <hr class="my-4">
         <div class="row align-items-center">
             <div class="col-md-7 col-lg-8">
-                <p>© 2024 Copyright: <a href="#" style="text-decoration: none;"><strong class="text-primary">UTNC.edu.pe</strong></a></p>
+                <p class="small mb-0">© 2024 Copyright: 
+                    <a href="#" class="text-decoration-none">
+                        <strong class="text-primary">UTNC.edu.pe</strong>
+                    </a>
+                </p>
             </div>
             <div class="col-md-5 col-lg-4">
                 <div class="text-center text-md-end">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a></li>
+                    <ul class="list-unstyled list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-sm btn-outline-light rounded-circle me-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-sm btn-outline-light rounded-circle me-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-sm btn-outline-light rounded-circle me-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-sm btn-outline-light rounded-circle" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

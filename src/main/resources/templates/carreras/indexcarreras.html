@@ -17,66 +17,112 @@
     <!-- Hero Section -->
     <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
         <div class="container position-relative">
-            <h1 class="display-3 position-relative">Descubre Tu Vocación</h1>
-            <p class="lead position-relative">Programas académicos de excelencia para tu desarrollo profesional.</p>
-            <a href="admision.html" class="btn btn-primary btn-lg mt-3 position-relative">Postula Ahora</a>
+            <div class="animate-fade-in">
+                <i class="bi bi-book-fill mb-3" style="font-size: 4rem; opacity: 0.9;"></i>
+                <h1 class="display-3 fw-bold mb-4 position-relative">Descubre Tu Vocación</h1>
+                <p class="lead fs-4 mb-4 position-relative">Programas académicos de excelencia para tu desarrollo profesional.</p>
+                <a th:href="@{/admision}" class="btn btn-primary btn-lg mt-3 position-relative shadow-lg">
+                    <i class="bi bi-file-earmark-text me-2"></i>Postula Ahora
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container py-5">
-        <div class="text-center mb-4">
-            <h1 class="display-5">Explora nuestras carreras</h1>
-            <p class="lead">Selecciona una facultad y conoce sus programas.</p>
+        <div class="text-center mb-5 animate-fade-in">
+            <i class="bi bi-mortarboard-fill text-primary mb-3" style="font-size: 3rem;"></i>
+            <h1 class="display-5 fw-bold mb-3">Explora nuestras carreras</h1>
+            <p class="lead text-muted">Selecciona una facultad y conoce sus programas académicos.</p>
         </div>
 
         
 
         <!-- Secciones por Facultad (presentación con imagen + acordeones) -->
-        <div id="ingenieria" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
-            <div class="col-md-4">
-                <img src="/images/ingenieria_moderna.svg" class="card-img-top rounded shadow" alt="Ingenierías">
+        <div id="ingenieria" class="row align-items-center my-5 p-4 bg-light rounded shadow-hover animate-scale-in">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="position-relative">
+                    <img src="/images/ingenieria_moderna.svg" class="card-img-top rounded shadow" alt="Ingenierías">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-primary fs-6">
+                            <i class="bi bi-cpu-fill me-1"></i>Ingeniería
+                        </span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-8">
-                <h2 class="text-primary">Ingenierías</h2>
-                <p>La facultad de ingenierías de la UTNC está a la vanguardia de la tecnología y la innovación. Ofrecemos programas como Ingeniería de Software, Ingeniería Civil y Arquitectura, diseñados para formar profesionales capaces de crear, diseñar y optimizar sistemas y soluciones que impulsen el progreso.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-cpu-fill text-primary me-3" style="font-size: 2.5rem;"></i>
+                    <h2 class="text-primary mb-0 fw-bold">Ingenierías</h2>
+                </div>
+                <p class="text-muted mb-4">La facultad de ingenierías de la UTNC está a la vanguardia de la tecnología y la innovación. Ofrecemos programas como Ingeniería de Software, Ingeniería Civil y Arquitectura, diseñados para formar profesionales capaces de crear, diseñar y optimizar sistemas y soluciones que impulsen el progreso.</p>
                 <div class="accordion" id="accordionIngenieria">
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngSoftware" aria-expanded="true" aria-controls="collapseIngSoftware">Ingeniería de Software</button>
+                            <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngSoftware" aria-expanded="true" aria-controls="collapseIngSoftware">
+                                <i class="bi bi-code-slash text-primary me-2"></i>Ingeniería de Software
+                            </button>
                         </h2>
                         <div id="collapseIngSoftware" class="accordion-collapse collapse show" data-bs-parent="#accordionIngenieria">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Ingeniero/a de Software</p>
-                                <p><strong>Descripción:</strong> Diseña, desarrolla y mantiene sistemas de software complejos con metodologías ágiles.</p>
-                                <a href="/carreras/ingenieria-software" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-primary me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-primary me-2"></i><strong>Título:</strong> Ingeniero/a de Software</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i><strong>Descripción:</strong> Diseña, desarrolla y mantiene sistemas de software complejos con metodologías ágiles y tecnologías de vanguardia.</p>
+                                <a href="/carreras/ingenieria-software" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngCivil" aria-expanded="false" aria-controls="collapseIngCivil">Ingeniería Civil</button>
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngCivil" aria-expanded="false" aria-controls="collapseIngCivil">
+                                <i class="bi bi-building text-primary me-2"></i>Ingeniería Civil
+                            </button>
                         </h2>
                         <div id="collapseIngCivil" class="accordion-collapse collapse" data-bs-parent="#accordionIngenieria">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Ingeniero/a Civil</p>
-                                <p><strong>Descripción:</strong> Diseña y gestiona infraestructuras sostenibles para el desarrollo social.</p>
-                                <a href="/carreras/ingenieria-civil" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-primary me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-primary me-2"></i><strong>Título:</strong> Ingeniero/a Civil</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i><strong>Descripción:</strong> Diseña y gestiona infraestructuras sostenibles para el desarrollo social y económico.</p>
+                                <a href="/carreras/ingenieria-civil" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArquitectura" aria-expanded="false" aria-controls="collapseArquitectura">Arquitectura</button>
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArquitectura" aria-expanded="false" aria-controls="collapseArquitectura">
+                                <i class="bi bi-house-heart text-primary me-2"></i>Arquitectura
+                            </button>
                         </h2>
                         <div id="collapseArquitectura" class="accordion-collapse collapse" data-bs-parent="#accordionIngenieria">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Arquitecto/a</p>
-                                <p><strong>Descripción:</strong> Diseña espacios innovadores, estéticos y funcionales.</p>
-                                <a href="/carreras/arquitectura" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-primary me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                            </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-primary me-2"></i><strong>Título:</strong> Arquitecto/a</p>
+                        </div>
+                    </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i><strong>Descripción:</strong> Diseña espacios innovadores, estéticos y funcionales que transforman el entorno urbano.</p>
+                                <a href="/carreras/arquitectura" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -84,37 +130,67 @@
             </div>
         </div>
 
-        <div id="arte" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Arte y Diseño">
+        <div id="arte" class="row align-items-center my-5 p-4 bg-light rounded shadow-hover animate-scale-in" style="animation-delay: 0.1s;">
+            <div class="col-md-4 mb-4 mb-md-0 order-md-2">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Arte y Diseño">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-success fs-6">
+                            <i class="bi bi-palette-fill me-1"></i>Artes
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8">
-                <h2 class="text-primary">Arte y Diseño</h2>
-                <p>Fomentamos la creatividad y la expresión artística a través de programas como Diseño Gráfico y Artes Visuales. Desarrolla habilidades técnicas y conceptuales para destacarte en la industria creativa.</p>
+            <div class="col-md-8 order-md-1">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-palette-fill text-success me-3" style="font-size: 2.5rem;"></i>
+                    <h2 class="text-primary mb-0 fw-bold">Arte y Diseño</h2>
+                </div>
+                <p class="text-muted mb-4">Fomentamos la creatividad y la expresión artística a través de programas como Diseño Gráfico y Artes Visuales. Desarrolla habilidades técnicas y conceptuales para destacarte en la industria creativa y contribuir al enriquecimiento cultural.</p>
                 <div class="accordion" id="accordionArte">
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiseno" aria-expanded="true" aria-controls="collapseDiseno">Diseño Gráfico</button>
+                            <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiseno" aria-expanded="true" aria-controls="collapseDiseno">
+                                <i class="bi bi-brush text-success me-2"></i>Diseño Gráfico
+                            </button>
                         </h2>
                         <div id="collapseDiseno" class="accordion-collapse collapse show" data-bs-parent="#accordionArte">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 8 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Diseño Gráfico</p>
-                                <p><strong>Descripción:</strong> Comunicación visual para resolver problemas mediante diseño.</p>
-                                <a href="/carreras/diseno-grafico" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-success me-2"></i><strong>Duración:</strong> 8 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-success me-2"></i><strong>Título:</strong> Licenciado/a en Diseño Gráfico</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-success me-2"></i><strong>Descripción:</strong> Comunicación visual estratégica para resolver problemas mediante diseño creativo e innovador.</p>
+                                <a href="/carreras/diseno-grafico" class="btn btn-outline-success btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArtes" aria-expanded="false" aria-controls="collapseArtes">Artes Visuales</button>
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArtes" aria-expanded="false" aria-controls="collapseArtes">
+                                <i class="bi bi-palette text-success me-2"></i>Artes Visuales
+                            </button>
                         </h2>
                         <div id="collapseArtes" class="accordion-collapse collapse" data-bs-parent="#accordionArte">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 8 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Artes Visuales</p>
-                                <p><strong>Descripción:</strong> Formación artística con enfoque contemporáneo.</p>
-                                <a href="/carreras/artes-visuales" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-success me-2"></i><strong>Duración:</strong> 8 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-success me-2"></i><strong>Título:</strong> Licenciado/a en Artes Visuales</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-success me-2"></i><strong>Descripción:</strong> Formación artística con enfoque contemporáneo en diversas disciplinas visuales.</p>
+                                <a href="/carreras/artes-visuales" class="btn btn-outline-success btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -122,50 +198,90 @@
             </div>
         </div>
 
-        <div id="salud" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Ciencias de la Salud">
-            </div>
+        <div id="salud" class="row align-items-center my-5 p-4 bg-light rounded shadow-hover animate-scale-in" style="animation-delay: 0.2s;">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Ciencias de la Salud">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-danger fs-6">
+                            <i class="bi bi-heart-pulse-fill me-1"></i>Salud
+                        </span>
+                            </div>
+                        </div>
+                    </div>
             <div class="col-md-8">
-                <h2 class="text-primary">Ciencias de la Salud</h2>
-                <p>Con enfoque humanista y científico, preparamos a los futuros profesionales de Enfermería, Nutrición y Tecnología Médica, combinando teoría con práctica en entornos simulados y reales.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-heart-pulse-fill text-danger me-3" style="font-size: 2.5rem;"></i>
+                    <h2 class="text-primary mb-0 fw-bold">Ciencias de la Salud</h2>
+                </div>
+                <p class="text-muted mb-4">Con enfoque humanista y científico, preparamos a los futuros profesionales de Enfermería, Nutrición y Tecnología Médica, combinando teoría con práctica en entornos simulados y reales para garantizar el bienestar de la población.</p>
                 <div class="accordion" id="accordionSalud">
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnfermeria" aria-expanded="true" aria-controls="collapseEnfermeria">Enfermería</button>
+                            <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnfermeria" aria-expanded="true" aria-controls="collapseEnfermeria">
+                                <i class="bi bi-hospital text-danger me-2"></i>Enfermería
+                            </button>
                         </h2>
                         <div id="collapseEnfermeria" class="accordion-collapse collapse show" data-bs-parent="#accordionSalud">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Enfermería</p>
-                                <p><strong>Descripción:</strong> Atención integral y humanizada de la salud.</p>
-                                <a href="/carreras/enfermeria" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-danger me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-danger me-2"></i><strong>Título:</strong> Licenciado/a en Enfermería</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-danger me-2"></i><strong>Descripción:</strong> Atención integral y humanizada de la salud a personas, familias y comunidades.</p>
+                                <a href="/carreras/enfermeria" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutricion" aria-expanded="false" aria-controls="collapseNutricion">Nutrición y Dietética</button>
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutricion" aria-expanded="false" aria-controls="collapseNutricion">
+                                <i class="bi bi-apple text-danger me-2"></i>Nutrición y Dietética
+                            </button>
                         </h2>
                         <div id="collapseNutricion" class="accordion-collapse collapse" data-bs-parent="#accordionSalud">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Nutrición y Dietética</p>
-                                <p><strong>Descripción:</strong> Promoción de hábitos saludables y prevención de enfermedades.</p>
-                                <a href="/carreras/nutricion" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-danger me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-danger me-2"></i><strong>Título:</strong> Licenciado/a en Nutrición y Dietética</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-danger me-2"></i><strong>Descripción:</strong> Promoción de hábitos saludables y prevención de enfermedades mediante la alimentación equilibrada.</p>
+                                <a href="/carreras/nutricion" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTecMedica" aria-expanded="false" aria-controls="collapseTecMedica">Tecnología Médica</button>
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTecMedica" aria-expanded="false" aria-controls="collapseTecMedica">
+                                <i class="bi bi-clipboard-pulse text-danger me-2"></i>Tecnología Médica
+                            </button>
                         </h2>
                         <div id="collapseTecMedica" class="accordion-collapse collapse" data-bs-parent="#accordionSalud">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Tecnología Médica</p>
-                                <p><strong>Descripción:</strong> Diagnóstico y soporte clínico mediante tecnologías biomédicas.</p>
-                                <a href="/carreras/tecnologia-medica" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-danger me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-danger me-2"></i><strong>Título:</strong> Licenciado/a en Tecnología Médica</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-danger me-2"></i><strong>Descripción:</strong> Diagnóstico y soporte clínico mediante tecnologías biomédicas de última generación.</p>
+                                <a href="/carreras/tecnologia-medica" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -173,37 +289,67 @@
             </div>
         </div>
 
-        <div id="derecho" class="row align-items-center my-5 p-4 bg-light rounded shadow-sm">
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Derecho">
+        <div id="derecho" class="row align-items-center my-5 p-4 bg-light rounded shadow-hover animate-scale-in" style="animation-delay: 0.3s;">
+            <div class="col-md-4 mb-4 mb-md-0 order-md-2">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded shadow" alt="Derecho">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-warning fs-6">
+                            <i class="bi bi-balance-scale-fill me-1"></i>Derecho
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8">
-                <h2 class="text-primary">Derecho</h2>
-                <p>Formamos profesionales con sólido conocimiento jurídico y fuerte compromiso ético. Nuestro programa aborda los desafíos legales contemporáneos con enfoque en justicia social y estado de derecho.</p>
+            <div class="col-md-8 order-md-1">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-balance-scale-fill text-warning me-3" style="font-size: 2.5rem;"></i>
+                    <h2 class="text-primary mb-0 fw-bold">Derecho</h2>
+                </div>
+                <p class="text-muted mb-4">Formamos profesionales con sólido conocimiento jurídico y fuerte compromiso ético. Nuestro programa aborda los desafíos legales contemporáneos con enfoque en justicia social, estado de derecho y defensa de los derechos humanos.</p>
                 <div class="accordion" id="accordionDerecho">
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDerecho" aria-expanded="true" aria-controls="collapseDerecho">Derecho</button>
+                            <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDerecho" aria-expanded="true" aria-controls="collapseDerecho">
+                                <i class="bi bi-gavel text-warning me-2"></i>Derecho
+                            </button>
                         </h2>
                         <div id="collapseDerecho" class="accordion-collapse collapse show" data-bs-parent="#accordionDerecho">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 10 semestres</p>
-                                <p><strong>Título:</strong> Abogado/a</p>
-                                <p><strong>Descripción:</strong> Formación jurídica con pensamiento crítico y compromiso social.</p>
-                                <a href="/carreras/derecho" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-warning me-2"></i><strong>Duración:</strong> 10 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-warning me-2"></i><strong>Título:</strong> Abogado/a</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-warning me-2"></i><strong>Descripción:</strong> Formación jurídica integral con pensamiento crítico, ética profesional y compromiso social.</p>
+                                <a href="/carreras/derecho" class="btn btn-outline-warning btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item border-0 shadow-sm">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCienciasPoliticas" aria-expanded="false" aria-controls="collapseCienciasPoliticas">Ciencias Políticas</button>
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCienciasPoliticas" aria-expanded="false" aria-controls="collapseCienciasPoliticas">
+                                <i class="bi bi-building-gear text-warning me-2"></i>Ciencias Políticas
+                            </button>
                         </h2>
                         <div id="collapseCienciasPoliticas" class="accordion-collapse collapse" data-bs-parent="#accordionDerecho">
                             <div class="accordion-body">
-                                <p><strong>Duración:</strong> 8 semestres</p>
-                                <p><strong>Título:</strong> Licenciado/a en Ciencias Políticas</p>
-                                <p><strong>Descripción:</strong> Análisis político y gestión pública/privada.</p>
-                                <a href="/carreras/ciencias-politicas" class="btn btn-outline-primary btn-sm">Ver más</a>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-clock text-warning me-2"></i><strong>Duración:</strong> 8 semestres</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1"><i class="bi bi-award text-warning me-2"></i><strong>Título:</strong> Licenciado/a en Ciencias Políticas</p>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><i class="bi bi-info-circle text-warning me-2"></i><strong>Descripción:</strong> Análisis político y gestión pública/privada para el desarrollo institucional.</p>
+                                <a href="/carreras/ciencias-politicas" class="btn btn-outline-warning btn-sm">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>Ver más
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -212,46 +358,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary">UTNC</h5>
-                    <p>Comprometidos con la formación de profesionales íntegros y capaces de transformar la sociedad.</p>
-                </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Enlaces</h5>
-                    <p><a href="nosotros.html" class="text-white" style="text-decoration: none;">Nosotros</a></p>
-                    <p><a href="carreras.html" class="text-white" style="text-decoration: none;">Carreras</a></p>
-                    <p><a href="admision.html" class="text-white" style="text-decoration: none;">Admisión</a></p>
-                    <p><a href="campus.html" class="text-white" style="text-decoration: none;">Campus</a></p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary">Contacto</h5>
-                    <p><i class="bi bi-geo-alt-fill me-3"></i> Av. Universitaria 123, Nuevo Chimbote, Perú</p>
-                    <p><i class="bi bi-envelope-fill me-3"></i> info@utnc.edu.pe</p>
-                    <p><i class="bi bi-telephone-fill me-3"></i> +51 987 654 321</p>
-                </div>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center">
-                <div class="col-md-7 col-lg-8">
-                    <p>© 2024 Copyright: <a href="#" style="text-decoration: none;"><strong class="text-primary">UTNC.edu.pe</strong></a></p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <div class="text-center text-md-end">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div th:replace="fragments/footer :: footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script th:src="@{/js/scrips.js}"></script>

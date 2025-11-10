@@ -1,88 +1,239 @@
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Gráfico - UTNC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" th:href="@{/css/styles.css}">
-    <style>body{padding-top:0!important}</style>
+    <style>
+        body { padding-top: 76px !important; }
+        .career-header {
+            background: linear-gradient(135deg, rgba(102, 51, 0, 0.9), rgba(204, 102, 0, 0.8)), 
+                        url('/images/estudiantes_utnc.svg') center/cover;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .info-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .info-card:hover {
+            transform: translateX(5px);
+            border-left-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
 </head>
 <body>
-    <header class="text-white" style="background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('/images/estudiantes_utnc.svg') center/cover;">
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <header class="career-header text-white">
         <div class="container py-5">
-            <h1 class="display-5 mb-1">Diseño Gráfico</h1>
-            <p class="lead mb-0">Comunicación visual estratégica para transformar ideas en impacto.</p>
+            <div class="animate-fade-in">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-brush me-3" style="font-size: 3.5rem; opacity: 0.9;"></i>
+                    <div>
+                        <h1 class="display-4 fw-bold mb-2">Diseño Gráfico</h1>
+                        <p class="lead mb-0 fs-5">Comunicación visual estratégica para transformar ideas en impacto</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <section class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1 class="mb-3">Diseño Gráfico</h1>
-                <p>Formación creativa para comunicar ideas visualmente en medios impresos y digitales con enfoque estratégico.</p>
-                <ul class="list-unstyled">
-                    <li><strong>Duración:</strong> 8 semestres</li>
-                    <li><strong>Título:</strong> Licenciado/a en Diseño Gráfico</li>
-                    <li><strong>Campo laboral:</strong> Agencias, estudios, editorial, marketing digital, freelance.</li>
-                </ul>
-                <a href="/admision" class="btn btn-primary">Postular</a>
+        <div class="row align-items-center g-4">
+            <div class="col-md-6 animate-slide-left">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-palette-fill text-warning me-3" style="font-size: 2.5rem;"></i>
+                    <h2 class="fw-bold mb-0">Sobre la Carrera</h2>
+                </div>
+                <p class="lead text-muted mb-4">Formación creativa para comunicar ideas visualmente en medios impresos y digitales con enfoque estratégico que transforma marcas y mensajes.</p>
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-clock-history text-warning me-2"></i>
+                            <div>
+                                <strong>Duración:</strong><br>
+                                <span class="text-muted">8 semestres</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-award text-warning me-2"></i>
+                            <div>
+                                <strong>Título:</strong><br>
+                                <span class="text-muted">Licenciado/a en Diseño Gráfico</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-start mb-2">
+                            <i class="bi bi-briefcase text-warning me-2 mt-1"></i>
+                            <div>
+                                <strong>Campo laboral:</strong><br>
+                                <span class="text-muted">Agencias, estudios, editorial, marketing digital, freelance.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a th:href="@{/admision}" class="btn btn-warning btn-lg shadow-lg">
+                    <i class="bi bi-file-earmark-text me-2"></i>Postular Ahora
+                </a>
             </div>
-            <div class="col-md-6">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/3o1E3r7r6wQ" title="Diseño Gráfico" allowfullscreen></iframe>
+            <div class="col-md-6 animate-slide-right">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/3o1E3r7r6wQ" title="Diseño Gráfico" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="container pb-5">
-        <div class="row g-4">
+        <div class="row g-4 mb-4">
             <div class="col-md-6">
-                <div class="card h-100"><div class="card-body">
-                    <h5 class="card-title">¿Por qué estudiar esta carrera?</h5>
-                    <ul class="mb-0">
-                        <li>Alta demanda en medios digitales y branding.</li>
-                        <li>Desarrollo de un portafolio competitivo.</li>
-                        <li>Versatilidad para trabajar en múltiples industrias.</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100"><div class="card-body">
-                    <h5 class="card-title">Perfil del egresado</h5>
-                    <ul class="mb-0">
-                        <li>Domina tipografía, color y composición.</li>
-                        <li>Uso avanzado de herramientas digitales.</li>
-                        <li>Capacidad de conceptualización y dirección de arte.</li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="col-md-12">
-                <div class="card"><div class="card-body">
-                    <h5 class="card-title">Plan de estudios (resumen)</h5>
-                    <div class="row">
-                        <div class="col-md-6"><ul>
-                            <li>Fundamentos del Diseño</li>
-                            <li>Ilustración Digital</li>
-                            <li>Identidad y Branding</li>
-                            <li>UX/UI</li>
-                            <li>Fotografía y Video</li>
-                        </ul></div>
-                        <div class="col-md-6"><ul>
-                            <li>Animación y Motion Graphics</li>
-                            <li>Packaging</li>
-                            <li>Redacción Creativa</li>
-                            <li>Marketing Digital</li>
-                            <li>Proyecto Portafolio</li>
-                        </ul></div>
+                <div class="card h-100 info-card shadow-sm border-0 animate-scale-in">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-question-circle-fill text-warning me-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title fw-bold mb-0">¿Por qué estudiar esta carrera?</h5>
+                        </div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Alta demanda en medios digitales y branding corporativo
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Desarrollo de un portafolio competitivo desde el inicio
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Versatilidad para trabajar en múltiples industrias
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Oportunidades de trabajo remoto y emprendimiento creativo
+                            </li>
+                        </ul>
                     </div>
-                    <a href="/admision" class="btn btn-outline-primary">Postula ahora</a>
-                </div></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 info-card shadow-sm border-0 animate-scale-in" style="animation-delay: 0.1s;">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-person-badge text-warning me-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title fw-bold mb-0">Perfil del Egresado</h5>
+                        </div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="bi bi-gear-fill text-warning me-2"></i>
+                                Domina tipografía, color y composición visual
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-gear-fill text-warning me-2"></i>
+                                Uso avanzado de herramientas digitales profesionales
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-gear-fill text-warning me-2"></i>
+                                Capacidad de conceptualización y dirección de arte
+                            </li>
+                            <li>
+                                <i class="bi bi-gear-fill text-warning me-2"></i>
+                                Diseña soluciones visuales estratégicas y efectivas
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-lg border-0 animate-scale-in" style="animation-delay: 0.2s;">
+            <div class="card-header bg-warning text-dark">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-book-fill me-3" style="font-size: 1.5rem;"></i>
+                    <h5 class="card-title fw-bold mb-0">Plan de Estudios</h5>
+                </div>
+            </div>
+            <div class="card-body p-4">
+                <p class="text-muted mb-4">Nuestro plan de estudios está diseñado para formar profesionales integrales con conocimientos teóricos y prácticos en las áreas más demandadas del diseño gráfico.</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-warning mb-3">
+                            <i class="bi bi-1-circle-fill me-2"></i>Ciclo Básico (Semestres 1-4)
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-palette text-warning me-2"></i>
+                                Fundamentos del Diseño
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-image text-warning me-2"></i>
+                                Ilustración Digital
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-tag text-warning me-2"></i>
+                                Identidad y Branding
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-laptop text-warning me-2"></i>
+                                UX/UI
+                            </li>
+                            <li>
+                                <i class="bi bi-camera text-warning me-2"></i>
+                                Fotografía y Video
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-warning mb-3">
+                            <i class="bi bi-2-circle-fill me-2"></i>Ciclo Avanzado (Semestres 5-8)
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-film text-warning me-2"></i>
+                                Animación y Motion Graphics
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-box text-warning me-2"></i>
+                                Packaging
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-pencil text-warning me-2"></i>
+                                Redacción Creativa
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-megaphone text-warning me-2"></i>
+                                Marketing Digital
+                            </li>
+                            <li>
+                                <i class="bi bi-rocket-takeoff text-warning me-2"></i>
+                                Proyecto Portafolio
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a th:href="@{/admision}" class="btn btn-warning btn-lg shadow-lg">
+                        <i class="bi bi-file-earmark-text me-2"></i>Postula Ahora
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <div th:replace="fragments/footer :: footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scrips.js}"></script>
 </body>
 </html>
-
