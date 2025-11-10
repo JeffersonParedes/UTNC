@@ -1,13 +1,127 @@
-body {
-    padding-top: 56px; 
+/* ============================================
+   ESTILOS GLOBALES Y ANIMACIONES
+   ============================================ */
+
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #003366;
+    --accent-color: #00a8e8;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --transition-speed: 0.3s;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 76px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
 .hero-section {
-    background: url('../images/campus-principal-header.svg') no-repeat center center;
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
+                url('/images/campus_principal.svg') no-repeat center center;
     background-size: cover;
-    height: 70vh;
+    background-attachment: fixed;
+    min-height: 70vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-section::before {
@@ -17,17 +131,52 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 51, 102, 0.7);
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(0, 102, 204, 0.7) 100%);
     z-index: 1;
-}
-.hero-section .container > * {
-    z-index: 3;
-    position: relative;
 }
 
 .hero-section .container {
     position: relative;
     z-index: 2;
+}
+
+.hero-section h1 {
+    animation: fadeIn 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+    animation: fadeIn 1.2s ease-out;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-section .btn {
+    animation: fadeIn 1.4s ease-out;
+    transition: all var(--transition-speed) ease;
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   CARDS Y TARJETAS
+   ============================================ */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .card-img-top {
@@ -36,63 +185,294 @@ body {
     width: 100%;
     aspect-ratio: 16/9;
     object-position: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
-/* Estilos para las imágenes de facultades en carreras.html */
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Estilos para las imágenes de facultades */
 .row .card-img-top {
     height: 250px;
     object-fit: cover;
     width: 100%;
     aspect-ratio: 4/3;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-md);
 }
 
-.card:hover .card-img-top {
+/* ============================================
+   BOTONES
+   ============================================ */
+
+.btn {
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar {
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-speed) ease;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
     transform: scale(1.05);
 }
 
-.card {
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    margin: 0 0.2rem;
 }
 
-.card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-/* Estilos para el carrusel de carreras */
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+/* ============================================
+   CARRUSEL
+   ============================================ */
+
 #carouselCarreras .carousel-indicators {
     bottom: -40px;
 }
 
 #carouselCarreras .carousel-indicators button {
-    background-color: #003366;
-    height: 10px;
-    width: 10px;
+    background-color: var(--secondary-color);
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+#carouselCarreras .carousel-indicators button.active {
+    background-color: var(--primary-color);
+    transform: scale(1.3);
 }
 
 #carouselCarreras .carousel-control-prev,
 #carouselCarreras .carousel-control-next {
-    width: 5%;
-    background-color: rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    height: 40px;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
-/* Estilos responsive para el carrusel */
+#carouselCarreras .carousel-control-prev:hover,
+#carouselCarreras .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+
+section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+section:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* ============================================
+   ICONOS
+   ============================================ */
+
+.bi {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .bi,
+.btn:hover .bi {
+    transform: scale(1.2);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+footer a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    transform: translateX(5px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 768px) {
+    body {
+        padding-top: 66px;
+    }
+
+    .hero-section {
+        min-height: 50vh;
+        background-attachment: scroll;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
     #carouselCarreras .carousel-item .row {
         margin: 0;
     }
     
     #carouselCarreras .carousel-item .col-lg-5 {
         padding: 0 5px;
+        margin-bottom: 1rem;
     }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+
+.shadow-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Scroll suave para navegación */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spin 1s linear infinite;
 }
