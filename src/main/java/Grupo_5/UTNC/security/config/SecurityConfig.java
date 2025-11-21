@@ -16,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
@@ -26,11 +27,13 @@ public class SecurityConfig {
     private final JwtAuthenticationEntryPoint authenticationEntryPoint;
     private final JwtAccessDeniedHandler accessDeniedHandler;
     private final JwtAuthenticationFilter authenticationFilter;
+    private final CorsConfigurationSource corsConfigurationSource;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf.disable())
+            .cors(cors -> cors.configurationSource(corsConfigurationSource)) // Habilitar CORS
             .exceptionHandling(exception -> exception
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler)
@@ -39,6 +42,8 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll() // Endpoints de autenticación son públicos
                 .requestMatchers("/", "/home", "/css/**", "/js/**", "/images/**").permitAll() // Permite acceso a recursos estáticos y páginas principales
+                .requestMatchers("/carreras", "/carreras/**").permitAll() // Páginas de carreras públicas
+                .requestMatchers("/portal", "/portal/**").authenticated() // Portal requiere autenticación
                 .anyRequest().authenticated() // Todas las demás peticiones requieren autenticación
             );
         
