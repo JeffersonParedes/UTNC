@@ -1,5 +1,7 @@
 package Grupo_5.UTNC.controller;
 
+import Grupo_5.UTNC.service.CursoService;
+import Grupo_5.UTNC.service.EstudianteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class PortalController {
+    private final EstudianteService estudianteService;
+    private final CursoService cursoService;
+
+    public PortalController(EstudianteService estudianteService, CursoService cursoService) {
+        this.estudianteService = estudianteService;
+        this.cursoService = cursoService;
+    }
 
     // Página pública del portal
     @GetMapping("/portal")
@@ -28,7 +37,6 @@ public class PortalController {
     public String processLogin(@RequestParam String usuario, @RequestParam String password, Model model) {
         // Aquí iría la lógica de autenticación
         // Por ahora, redirigimos al panel del estudiante
-        // TODO: Implementar autenticación real
         if (usuario != null && password != null && !usuario.isEmpty() && !password.isEmpty()) {
             return "redirect:/portal/estudiante";
         } else {
@@ -55,7 +63,6 @@ public class PortalController {
     public String processRecuperar(@RequestParam String email, Model model) {
         // Aquí iría la lógica de recuperación de contraseña
         // Por ahora, simulamos el envío
-        // TODO: Implementar recuperación real
         if (email != null && !email.isEmpty() && email.contains("@")) {
             model.addAttribute("success", "Se ha enviado un enlace de recuperación a tu correo electrónico.");
         } else {
@@ -67,22 +74,20 @@ public class PortalController {
     // Panel del Estudiante - Inicio
     @GetMapping("/portal/estudiante")
     public String portalEstudianteIndex(Model model) {
-        // Datos de ejemplo para el panel
-        model.addAttribute("nombreAlumno", "Juan Pérez");
-        model.addAttribute("totalCursos", 4);
-        model.addAttribute("horasSemana", 20);
-        model.addAttribute("cuotasPendientes", 2);
+        model.addAttribute("nombreAlumno", "Alumno");
+        model.addAttribute("totalCursos", cursoService.listar().size());
+        model.addAttribute("horasSemana", 0);
+        model.addAttribute("cuotasPendientes", 0);
         return "portal/portalestudiante/portalindex"; // templates/portal/portalestudiante/portalindex.html
     }
 
     // Panel del Estudiante - Cursos
     @GetMapping("/portal/estudiante/cursos")
     public String portalEstudianteCursos(Model model) {
-        // Datos de ejemplo para cursos
-        model.addAttribute("totalCursos", 4);
-        model.addAttribute("totalCreditos", 14);
-        model.addAttribute("promedio", 16.5);
-        model.addAttribute("horasTotales", 20);
+        model.addAttribute("totalCursos", cursoService.listar().size());
+        model.addAttribute("totalCreditos", 0);
+        model.addAttribute("promedio", 0);
+        model.addAttribute("horasTotales", 0);
         return "portal/portalestudiante/cursos"; // templates/portal/portalestudiante/cursos.html
     }
 
@@ -117,4 +122,3 @@ public class PortalController {
         return "portal/portalestudiante/error"; // templates/portal/portalestudiante/error.html
     }
 }
-
