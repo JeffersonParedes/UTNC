@@ -81,6 +81,15 @@
                         <label for="email" class="form-label">Correo Electrónico *</label>
                         <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
                     </div>
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">Contraseña *</label>
+                        <input type="password" class="form-control" id="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+                        <div class="form-text">Esta será tu contraseña para acceder al portal estudiantil</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="confirmPassword" class="form-label">Confirmar Contraseña *</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Repite tu contraseña" required>
+                    </div>
                 </div>
             </fieldset>
 
@@ -167,6 +176,235 @@
     <div th:replace="~{fragments/footer :: footer}"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script th:src="@{/js/scrips.js}"></script>
+    <!-- Incluir nuestro script de autenticación -->
+    <script th:src="@{/js/auth.js}"></script>
+    <script>
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        // Manejar navegación entre pasos
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (validateCurrentStep()) {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateStepView();
+                }
+            }
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStepView();
+            }
+        });
+
+        // Manejar envío del formulario
+        document.getElementById('inscription-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateAllSteps()) {
+                submitRegistration();
+            }
+        });
+
+        function updateStepView() {
+            // Actualizar stepper visual
+            document.querySelectorAll('.step').forEach((step, index) => {
+                if (index + 1 <= currentStep) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+
+            // Mostrar/ocultar fieldsets
+            document.querySelectorAll('.form-step').forEach((fieldset, index) => {
+                if (index + 1 === currentStep) {
+                    fieldset.style.display = 'block';
+                } else {
+                    fieldset.style.display = 'none';
+                }
+            });
+
+            // Actualizar botones
+            document.getElementById('prev-btn').disabled = currentStep === 1;
+            
+            if (currentStep === totalSteps) {
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('submit-btn').style.display = 'inline-block';
+                populateReviewData();
+            } else {
+                document.getElementById('next-btn').style.display = 'inline-block';
+                document.getElementById('submit-btn').style.display = 'none';
+            }
+        }
+
+        function validateCurrentStep() {
+            const currentFieldset = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+            const inputs = currentFieldset.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+
+            // Validación específica del paso 1 (contraseñas)
+            if (currentStep === 1) {
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const email = document.getElementById('email').value;
+
+                if (password.length < 8) {
+                    document.getElementById('password').classList.add('is-invalid');
+                    AuthService.showError('La contraseña debe tener al menos 8 caracteres');
+                    isValid = false;
+                }
+
+                if (password !== confirmPassword) {
+                    document.getElementById('confirmPassword').classList.add('is-invalid');
+                    AuthService.showError('Las contraseñas no coinciden');
+                    isValid = false;
+                }
+
+                if (email && !isValidEmail(email)) {
+                    document.getElementById('email').classList.add('is-invalid');
+                    AuthService.showError('Por favor ingresa un email válido');
+                    isValid = false;
+                }
+            }
+
+            return isValid;
+        }
+
+        function validateAllSteps() {
+            for (let step = 1; step <= totalSteps; step++) {
+                currentStep = step;
+                if (!validateCurrentStep()) {
+                    updateStepView();
+                    return false;
+                }
+            }
+            currentStep = totalSteps;
+            return true;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function populateReviewData() {
+            const reviewDiv = document.getElementById('review-data');
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const dni = document.getElementById('dni').value;
+            const career = document.getElementById('career').value;
+
+            reviewDiv.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Datos a registrar:</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Nombre:</strong> ${firstName} ${lastName}</li>
+                            <li><strong>Email:</strong> ${email}</li>
+                            <li><strong>DNI:</strong> ${dni}</li>
+                            <li><strong>Carrera:</strong> ${career}</li>
+                        </ul>
+                        <p class="text-muted small">Se creará tu cuenta de acceso al portal estudiantil con estos datos.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function submitRegistration() {
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // 1. Recolectar TODOS los datos del formulario y mapearlos al DTO (RegistroEstudianteDTO)
+            const registrationData = {
+                // Paso 1: Información Personal
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                dni: document.getElementById('dni').value,
+                birthDate: document.getElementById('birthDate').value,
+                gender: document.getElementById('gender').value,
+                phone: document.getElementById('phone').value,
+                
+                // Paso 2: Información Académica
+                schoolName: document.getElementById('schoolName').value,
+                graduationYear: document.getElementById('graduationYear').value,
+                careerName: document.getElementById('career').value, // El nombre de la carrera seleccionado
+                
+                // Paso 3 & 4: Adicionales y Términos
+                hasDisability: document.getElementById('hasDisability').checked, 
+                emergencyContact: document.getElementById('emergencyContact').value,
+                emergencyPhone: document.getElementById('emergencyPhone').value,
+                acceptTerms: document.getElementById('acceptTerms').checked 
+            };
+
+            try {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="spinner-border spinner-border-sm me-2"></i>Registrando...';
+
+                // 2. Realizar la solicitud POST a la API REST de Spring Boot
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(registrationData) // Convierte el objeto JS a JSON
+                });
+
+                const result = await response.json(); // Parsea la respuesta JSON (ApiResponse)
+
+                if (response.ok && result.success) { // El servidor devolvió HTTP 201 y éxito
+                    
+                    // Mostrar éxito y redirigir
+                    AuthService.showSuccess(result.message || '¡Registro exitoso! Serás redirigido al portal...');
+                    
+                    setTimeout(() => {
+                        window.location.href = '/portal/estudiante';
+                    }, 3000);
+
+                } else {
+                    // Error: El servidor devolvió 400 Bad Request o un mensaje de error de negocio
+                    const errorMessage = result.message || 'Error desconocido al registrar. Verifica la consola.';
+                    
+                    AuthService.showError(errorMessage);
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+
+            } catch (error) {
+                // Error de red (servidor apagado, conexión fallida)
+                console.error('Error de conexión o de red:', error);
+                AuthService.showError('Ocurrió un error de red. El servidor no está disponible o hay un problema de conexión.');
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        }
+        // Inicializar vista
+        updateStepView();
+
+        // Verificar si ya está autenticado
+        document.addEventListener('DOMContentLoaded', function() {
+            if (AuthService.isAuthenticated()) {
+                AuthService.showSuccess('Ya has iniciado sesión');
+                setTimeout(() => {
+                    window.location.href = '/portal/estudiante';
+                }, 1500);
+            }
+        });
+    </script>
 </body>
 </html>

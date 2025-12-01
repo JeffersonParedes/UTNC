@@ -8,149 +8,86 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "pagos")
 public class Pago {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pago")
     private Integer idPago;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_estudiante", nullable = false)
     private Estudiante estudiante;
 
-    @Column(name = "ciclo_academico", length = 20, nullable = false)
+    @Column(name = "ciclo_academico", columnDefinition = "VARCHAR(20)", nullable = false)
     private String cicloAcademico;
 
-    @Column(name = "numero_cuota", nullable = false)
+    @Column(name = "numero_cuota", columnDefinition = "INT", nullable = false)
     private Integer numeroCuota;
 
-    @Column(name = "concepto", length = 150, nullable = false)
+    @Column(name = "concepto", columnDefinition = "VARCHAR(150)", nullable = false)
     private String concepto;
 
-    @Column(name = "monto", precision = 10, scale = 2, nullable = false)
+    @Column(name = "monto", columnDefinition = "DECIMAL(10,2)", nullable = false)
     private BigDecimal monto;
 
-    @Column(name = "fecha_vencimiento", nullable = false)
+    @Column(name = "fecha_vencimiento", columnDefinition = "DATE", nullable = false)
     private LocalDate fechaVencimiento;
 
-    @Column(name = "estado", length = 20)
+    @Column(name = "estado", columnDefinition = "VARCHAR(20)", insertable = false, updatable = false)
     private String estado;
 
-    @Column(name = "fecha_pago")
+    @Column(name = "fecha_pago", columnDefinition = "DATE")
     private LocalDate fechaPago;
 
-    @Column(name = "metodo_pago", length = 50)
+    @Column(name = "metodo_pago", columnDefinition = "VARCHAR(50)")
     private String metodoPago;
 
-    @Column(name = "numero_operacion", length = 100)
+    @Column(name = "numero_operacion", columnDefinition = "VARCHAR(100)")
     private String numeroOperacion;
 
-    @Column(name = "comprobante_url", length = 255)
+    @Column(name = "comprobante_url", columnDefinition = "VARCHAR(255)")
     private String comprobanteUrl;
 
-    @Column(name = "fecha_registro")
+    @Column(name = "fecha_registro", columnDefinition = "TIMESTAMP", insertable = false, updatable = false)
     private LocalDateTime fechaRegistro;
 
-    public Integer getIdPago() {
-        return idPago;
-    }
+    public Integer getIdPago() { return idPago; }
+    public void setIdPago(Integer idPago) { this.idPago = idPago; }
 
-    public void setIdPago(Integer idPago) {
-        this.idPago = idPago;
-    }
+    public Estudiante getEstudiante() { return estudiante; }
+    public void setEstudiante(Estudiante estudiante) { this.estudiante = estudiante; }
 
-    public Estudiante getEstudiante() {
-        return estudiante;
-    }
+    public String getCicloAcademico() { return cicloAcademico; }
+    public void setCicloAcademico(String cicloAcademico) { this.cicloAcademico = cicloAcademico; }
 
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
-    }
+    public Integer getNumeroCuota() { return numeroCuota; }
+    public void setNumeroCuota(Integer numeroCuota) { this.numeroCuota = numeroCuota; }
 
-    public String getCicloAcademico() {
-        return cicloAcademico;
-    }
+    public String getConcepto() { return concepto; }
+    public void setConcepto(String concepto) { this.concepto = concepto; }
 
-    public void setCicloAcademico(String cicloAcademico) {
-        this.cicloAcademico = cicloAcademico;
-    }
+    public BigDecimal getMonto() { return monto; }
+    public void setMonto(BigDecimal monto) { this.monto = monto; }
 
-    public Integer getNumeroCuota() {
-        return numeroCuota;
-    }
+    public LocalDate getFechaVencimiento() { return fechaVencimiento; }
+    public void setFechaVencimiento(LocalDate fechaVencimiento) { this.fechaVencimiento = fechaVencimiento; }
 
-    public void setNumeroCuota(Integer numeroCuota) {
-        this.numeroCuota = numeroCuota;
-    }
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
 
-    public String getConcepto() {
-        return concepto;
-    }
+    public LocalDate getFechaPago() { return fechaPago; }
+    public void setFechaPago(LocalDate fechaPago) { this.fechaPago = fechaPago; }
 
-    public void setConcepto(String concepto) {
-        this.concepto = concepto;
-    }
+    public String getMetodoPago() { return metodoPago; }
+    public void setMetodoPago(String metodoPago) { this.metodoPago = metodoPago; }
 
-    public BigDecimal getMonto() {
-        return monto;
-    }
+    public String getNumeroOperacion() { return numeroOperacion; }
+    public void setNumeroOperacion(String numeroOperacion) { this.numeroOperacion = numeroOperacion; }
 
-    public void setMonto(BigDecimal monto) {
-        this.monto = monto;
-    }
+    public String getComprobanteUrl() { return comprobanteUrl; }
+    public void setComprobanteUrl(String comprobanteUrl) { this.comprobanteUrl = comprobanteUrl; }
 
-    public LocalDate getFechaVencimiento() {
-        return fechaVencimiento;
-    }
-
-    public void setFechaVencimiento(LocalDate fechaVencimiento) {
-        this.fechaVencimiento = fechaVencimiento;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public LocalDate getFechaPago() {
-        return fechaPago;
-    }
-
-    public void setFechaPago(LocalDate fechaPago) {
-        this.fechaPago = fechaPago;
-    }
-
-    public String getMetodoPago() {
-        return metodoPago;
-    }
-
-    public void setMetodoPago(String metodoPago) {
-        this.metodoPago = metodoPago;
-    }
-
-    public String getNumeroOperacion() {
-        return numeroOperacion;
-    }
-
-    public void setNumeroOperacion(String numeroOperacion) {
-        this.numeroOperacion = numeroOperacion;
-    }
-
-    public String getComprobanteUrl() {
-        return comprobanteUrl;
-    }
-
-    public void setComprobanteUrl(String comprobanteUrl) {
-        this.comprobanteUrl = comprobanteUrl;
-    }
-
-    public LocalDateTime getFechaRegistro() {
-        return fechaRegistro;
-    }
-
-    public void setFechaRegistro(LocalDateTime fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
+    public LocalDateTime getFechaRegistro() { return fechaRegistro; }
+    public void setFechaRegistro(LocalDateTime fechaRegistro) { this.fechaRegistro = fechaRegistro; }
 }
+
