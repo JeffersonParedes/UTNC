@@ -6,8 +6,14 @@ import java.util.Optional;
 
 public interface UsuarioService {
     List<Usuario> listar();
+
     Optional<Usuario> obtener(Integer id);
+
     Usuario crear(Usuario usuario);
+
+    Usuario actualizar(Usuario usuario);
+
     Optional<Usuario> buscarPorEmail(String email);
+
     Optional<Usuario> buscarPorUsername(String username);
 }

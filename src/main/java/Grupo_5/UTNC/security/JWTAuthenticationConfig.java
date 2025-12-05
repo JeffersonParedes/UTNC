@@ -1,5 +1,6 @@
 package Grupo_5.UTNC.security;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
@@ -10,8 +11,12 @@ import javax.crypto.spec.SecretKeySpec;
 
 @Component
 public class JWTAuthenticationConfig {
-    private final String secret = "change-this-secret";
-    private final long expirationSeconds = 3600;
+
+    @Value("${jwt.secret}")
+    private String secret;
+
+    @Value("${jwt.expiration.seconds}")
+    private long expirationSeconds;
 
     public String createToken(String subject) {
         String headerJson = "{\"alg\":\"HS256\",\"typ\":\"JWT\"}";
@@ -27,13 +32,16 @@ public class JWTAuthenticationConfig {
 
     public String validateTokenAndGetSubject(String token) {
         String[] parts = token.split("\\.");
-        if (parts.length != 3) return null;
+        if (parts.length != 3)
+            return null;
         String unsigned = parts[0] + "." + parts[1];
-        if (!constantTimeEquals(sign(unsigned), parts[2])) return null;
+        if (!constantTimeEquals(sign(unsigned), parts[2]))
+            return null;
         String payloadJson = new String(base64UrlDecode(parts[1]), StandardCharsets.UTF_8);
         String sub = extract(payloadJson, "sub");
         long exp = Long.parseLong(extract(payloadJson, "exp"));
-        if (Instant.now().getEpochSecond() > exp) return null;
+        if (Instant.now().getEpochSecond() > exp)
+            return null;
         return sub;
     }
 
@@ -51,7 +59,8 @@ public class JWTAuthenticationConfig {
     private String extract(String json, String field) {
         String key = "\"" + field + "\":";
         int i = json.indexOf(key);
-        if (i < 0) return null;
+        if (i < 0)
+            return null;
         int s = i + key.length();
         char c = json.charAt(s);
         if (c == '"') {
@@ -59,7 +68,8 @@ public class JWTAuthenticationConfig {
             return json.substring(s + 1, e);
         } else {
             int e = s;
-            while (e < json.length() && Character.isDigit(json.charAt(e))) e++;
+            while (e < json.length() && Character.isDigit(json.charAt(e)))
+                e++;
             return json.substring(s, e);
         }
     }
@@ -73,10 +83,13 @@ public class JWTAuthenticationConfig {
     }
 
     private boolean constantTimeEquals(String a, String b) {
-        if (a == null || b == null) return false;
-        if (a.length() != b.length()) return false;
+        if (a == null || b == null)
+            return false;
+        if (a.length() != b.length())
+            return false;
         int r = 0;
-        for (int i = 0; i < a.length(); i++) r |= a.charAt(i) ^ b.charAt(i);
+        for (int i = 0; i < a.length(); i++)
+            r |= a.charAt(i) ^ b.charAt(i);
         return r == 0;
     }
 }

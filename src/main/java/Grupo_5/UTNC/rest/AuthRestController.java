@@ -15,8 +15,14 @@ import Grupo_5.UTNC.service.UsuarioService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import java.time.LocalDateTime;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,14 +37,19 @@ public class AuthRestController {
     private final EstudianteService estudianteService;
     private final CarreraService carreraService;
     private final MatriculaService matriculaService;
+    private final AuthenticationManager authenticationManager;
 
-    public AuthRestController(UsuarioService usuarioService, PasswordEncoder passwordEncoder, JWTAuthenticationConfig jwtConfig, EstudianteService estudianteService, CarreraService carreraService, MatriculaService matriculaService) {
+    public AuthRestController(UsuarioService usuarioService, PasswordEncoder passwordEncoder, 
+                            JWTAuthenticationConfig jwtConfig, EstudianteService estudianteService, 
+                            CarreraService carreraService, MatriculaService matriculaService,
+                            AuthenticationManager authenticationManager) {
         this.usuarioService = usuarioService;
         this.passwordEncoder = passwordEncoder;
         this.jwtConfig = jwtConfig;
         this.estudianteService = estudianteService;
         this.carreraService = carreraService;
         this.matriculaService = matriculaService;
+        this.authenticationManager = authenticationManager;
     }
 
     public static class LoginRequest {
@@ -49,11 +60,60 @@ public class AuthRestController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginRequest req) {
-        return usuarioService.buscarPorUsername(req.username)
-                .filter(u -> passwordEncoder.matches(req.password, u.getContrasenaHash()))
-                .map(u -> ResponseEntity.ok(Map.of("token", jwtConfig.createToken(u.getUsername()))))
-                .orElseGet(() -> ResponseEntity.status(401).build());
+    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest req) {
+        try {
+            logger.info("Intento de login para usuario: {}", req.username);
+            
+            // Usar AuthenticationManager para autenticación robusta
+            Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(req.username, req.password)
+            );
+            
+            // Obtener detalles del usuario autenticado
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            String username = userDetails.getUsername();
+            
+            // Actualizar último acceso
+            usuarioService.buscarPorUsername(username).ifPresent(usuario -> {
+                usuario.setUltimoAcceso(LocalDateTime.now());
+                usuarioService.actualizar(usuario);
+            });
+            
+            // Generar token JWT
+            String token = jwtConfig.createToken(username);
+            
+            // Obtener información adicional del usuario
+            Usuario usuario = usuarioService.buscarPorUsername(username).orElse(null);
+            
+            logger.info("Login exitoso para usuario: {} con roles: {}", username, userDetails.getAuthorities());
+            
+            // Respuesta exitosa con información del usuario
+            return ResponseEntity.ok(Map.of(
+                "success", true,
+                "token", token,
+                "user", Map.of(
+                    "username", username,
+                    "email", usuario != null ? usuario.getEmail() : "",
+                    "estado", usuario != null ? usuario.getEstado() : "",
+                    "roles", userDetails.getAuthorities().stream()
+                            .map(auth -> auth.getAuthority())
+                            .toList()
+                )
+            ));
+            
+        } catch (BadCredentialsException e) {
+            logger.warn("Credenciales incorrectas para usuario: {}", req.username);
+            return ResponseEntity.status(401).body(Map.of(
+                "success", false,
+                "message", "Credenciales incorrectas"
+            ));
+        } catch (Exception e) {
+            logger.error("Error durante el login para usuario {}: {}", req.username, e.getMessage());
+            return ResponseEntity.status(500).body(Map.of(
+                "success", false,
+                "message", "Error interno del servidor"
+            ));
+        }
     }
     @PostMapping("/register")
     public ResponseEntity<?> registrar(@Valid @RequestBody InscripcionDTO dto) {
@@ -98,5 +158,84 @@ public class AuthRestController {
                 "token", token
             ))
         );
+    }
+    
+    /**
+     * Endpoint para obtener información del usuario actualmente autenticado
+     */
+    @GetMapping("/me")
+    public ResponseEntity<?> getCurrentUser(Authentication authentication) {
+        try {
+            if (authentication == null || !authentication.isAuthenticated()) {
+                return ResponseEntity.status(401).body(Map.of(
+                    "success", false,
+                    "message", "No autenticado"
+                ));
+            }
+            
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            String username = userDetails.getUsername();
+            
+            // Obtener información completa del usuario
+            Usuario usuario = usuarioService.buscarPorUsername(username).orElse(null);
+            if (usuario == null) {
+                return ResponseEntity.status(404).body(Map.of(
+                    "success", false,
+                    "message", "Usuario no encontrado"
+                ));
+            }
+            
+            return ResponseEntity.ok(Map.of(
+                "success", true,
+                "user", Map.of(
+                    "id", usuario.getIdUsuario(),
+                    "username", usuario.getUsername(),
+                    "email", usuario.getEmail(),
+                    "estado", usuario.getEstado(),
+                    "fechaCreacion", usuario.getFechaCreacion(),
+                    "ultimoAcceso", usuario.getUltimoAcceso(),
+                    "roles", userDetails.getAuthorities().stream()
+                            .map(auth -> auth.getAuthority())
+                            .toList()
+                )
+            ));
+            
+        } catch (Exception e) {
+            logger.error("Error obteniendo información del usuario actual: {}", e.getMessage());
+            return ResponseEntity.status(500).body(Map.of(
+                "success", false,
+                "message", "Error interno del servidor"
+            ));
+        }
+    }
+    
+    /**
+     * Endpoint para cerrar sesión (opcional, ya que JWT es stateless)
+     */
+    @PostMapping("/logout")
+    public ResponseEntity<?> logout(Authentication authentication) {
+        try {
+            if (authentication != null && authentication.isAuthenticated()) {
+                String username = authentication.getName();
+                logger.info("Usuario {} cerró sesión", username);
+                
+                // En una implementación completa, aquí podrías:
+                // - Agregar el token a una blacklist
+                // - Invalidar refresh tokens
+                // - Registrar el evento de logout
+            }
+            
+            return ResponseEntity.ok(Map.of(
+                "success", true,
+                "message", "Sesión cerrada exitosamente"
+            ));
+            
+        } catch (Exception e) {
+            logger.error("Error durante logout: {}", e.getMessage());
+            return ResponseEntity.status(500).body(Map.of(
+                "success", false,
+                "message", "Error interno del servidor"
+            ));
+        }
     }
 }
