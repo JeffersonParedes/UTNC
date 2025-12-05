@@ -28,4 +28,9 @@ public class CarreraServiceImpl implements CarreraService {
     public Carrera crear(Carrera carrera) {
         return carreraRepository.save(carrera);
     }
+
+    @Override
+    public Carrera buscarPorNombre(String nombre) {
+        return carreraRepository.findByNombreCarreraIgnoreCase(nombre).orElse(null);
+    }
 }

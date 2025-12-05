@@ -29,6 +29,7 @@ public class WebSecurityConfig {
             .cors(cors -> {})
             .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/api/auth/register").permitAll()
                 .requestMatchers("/", "/portal/**", "/api/auth/**", "/carreras/**", "/static/**").permitAll()
                 .anyRequest().authenticated())
             .addFilterBefore(jwtAuthentication, UsernamePasswordAuthenticationFilter.class);

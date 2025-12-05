@@ -8,4 +8,5 @@ public interface CarreraService {
     List<Carrera> listar();
     Optional<Carrera> obtener(Integer id);
     Carrera crear(Carrera carrera);
+    Carrera buscarPorNombre(String nombre);
 }

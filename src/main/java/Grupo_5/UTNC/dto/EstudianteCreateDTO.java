@@ -7,10 +7,8 @@ import Grupo_5.UTNC.validator.ValidDNI;
 import java.time.LocalDate;
 
 public class EstudianteCreateDTO {
-    @NotNull
     private Integer idUsuario;
 
-    @NotNull
     private Integer idCarrera;
 
     @NotBlank
